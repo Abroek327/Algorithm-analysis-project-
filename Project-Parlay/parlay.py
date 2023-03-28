@@ -23,8 +23,6 @@ def is_empty():
 startScreen()
 
 
-#don't need to run more than once
-#db_ops.create_songs_table()
 
 #deconstruct at end
 db_ops.destructor()
