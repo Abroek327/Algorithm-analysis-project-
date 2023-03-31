@@ -5,15 +5,6 @@ db_ops = db_operations("allGameHistory.db")
 
 def startScreen():
     print("Welcome to your Project Parlay!")
-
-#returns 0 if there are no entries in table
-def is_empty():
-    query = '''
-    SELECT COUNT(*)
-    FROM NFLHistory;
-    '''
-    result = db_ops.single_record(query)
-    return result == 0
     
 def search_by_games():
     #get a list of all artists
@@ -57,6 +48,11 @@ def search_by_games():
     
 #Main Program
 startScreen()
+
+
+numGames = input("How many games would you like to bet on?")
+numCapital = input("How much captial would you like to bet?")
+
 search_by_games()
 
 
