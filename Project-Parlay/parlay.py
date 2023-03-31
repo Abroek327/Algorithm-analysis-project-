@@ -1,5 +1,6 @@
 from helper import helper
 from db_operations import db_operations
+import itertools
 
 db_ops = db_operations("allGameHistory.db")
 
@@ -9,8 +10,9 @@ def startScreen():
 def search_by_games():
     #get a list of all artists
     query = '''
-    SELECT DISTINCT game_id, team_home, team_away, winning_team
-    FROM NFLHistory;
+    SELECT game_id, team_home, team_away, winning_team
+    FROM NFLHistory
+    GROUP BY game_id;
     '''
 
     print("Games in database: ")
@@ -44,10 +46,32 @@ def search_by_games():
     results = db_ops.name_placeholder_query(query, dictionary)
     helper.pretty_print(results)
 
+def calculateWinP(spread):
+    percent = (-.0303*spread) + .50
+    if(percent > .99):
+          return .99
+    else:
+          return percent
+    
+def permutations():
+    query = '''
+    SELECT DISTINCT team_home
+    FROM NFLHistory
+    '''
+
+    dictionary = {}
+    games = db_ops.name_placeholder_query2(query, dictionary)
+    list1 = ["a", "b", "c", "x", "y", "z"]
+    r = 2
+    perm = list(itertools.permutations(games, r))
+    helper.pretty_print(perm)
 
     
 #Main Program
 startScreen()
+permutations()
+
+print(calculateWinP(-11))
 
 
 numGames = input("How many games would you like to bet on?")
