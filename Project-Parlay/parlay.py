@@ -51,7 +51,15 @@ startScreen()
 
 
 numGames = input("How many games would you like to bet on?")
-numCapital = input("How much captial would you like to bet?")
+while numGames.isdigit() == False:
+            print("Number of games must be a number. Try again")
+            numCapital = input("How many games would you like to bet on?")
+numCapital = input("How much capital would you like to bet($)?")
+while numCapital.isdigit() == False:
+            print("Captial must be a number. Try again")
+            numCapital = input("How much capital would you like to bet($)?")
+
+
 
 search_by_games()
 
