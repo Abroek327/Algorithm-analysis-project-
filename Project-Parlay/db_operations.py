@@ -8,28 +8,6 @@ class db_operations():
         self.cursor = self.connection.cursor()
         print("connection made...")
     
-    #creates the songs table
-    def create_songs_table(self):
-        query = '''
-        CREATE TABLE songs(
-            songID VARCHAR(22) NOT NULL PRIMARY KEY,
-            Name VARCHAR(20),
-            Artist VARCHAR(20),
-            Album VARCHAR(20),
-            releaseDate DATETIME,
-            Genre VARCHAR(20),
-            Explicit BOOLEAN,
-            Duration DOUBLE,
-            Energy DOUBLE,
-            Danceability DOUBLE,
-            Acousticness DOUBLE,
-            Liveness DOUBLE,
-            Loudness DOUBLE
-        );
-        '''
-        self.cursor.execute(query)
-        print("Table Created")
-
     #retrieves a single value from a table
     def single_record(self, query):
         self.cursor.execute(query)

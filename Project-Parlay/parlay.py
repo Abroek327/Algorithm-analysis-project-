@@ -15,14 +15,14 @@ def is_empty():
     result = db_ops.single_record(query)
     return result == 0
     
-def search_by_artist():
+def search_by_games():
     #get a list of all artists
     query = '''
     SELECT DISTINCT game_id, team_home, team_away, winning_team
     FROM NFLHistory;
     '''
 
-    print("Games in playlist: ")
+    print("Games in database: ")
     dictionary = {}
     games = db_ops.name_placeholder_query2(query, dictionary)
     
@@ -57,7 +57,7 @@ def search_by_artist():
     
 #Main Program
 startScreen()
-search_by_artist()
+search_by_games()
 
 
 #deconstruct at end
