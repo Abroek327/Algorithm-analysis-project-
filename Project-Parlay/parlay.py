@@ -23,7 +23,8 @@ def search_by_artist():
     '''
 
     print("Games in playlist: ")
-    games = db_ops.single_attribute(query)
+    dictionary = {}
+    games = db_ops.name_placeholder_query2(query, dictionary)
     
     #show all artists an create a dictionary of choices
     choices = {}
