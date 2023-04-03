@@ -6,6 +6,15 @@ db_ops = db_operations("allGameHistory.db")
 
 def startScreen():
     print("Welcome to your Project Parlay!")
+
+
+def search_by_year():
+       year=input("Enter the last two digits of the year you'd like to see data for: ")
+       #query="SELECT * FROM NFLHistory WHERE schedule_date LIKE '%/"+year+"'"
+       query="SELECT * FROM NFLHistory WHERE schedule_date LIKE '%" +1/15/67+"'"
+
+       print(db_ops.simple_query(query))
+      # helper.pretty_print(results)
     
 def search_by_games():
     #get a list of all artists
@@ -19,6 +28,8 @@ def search_by_games():
     dictionary = {}
     games = db_ops.name_placeholder_query2(query, dictionary)
     
+    #commenting out for lack of relevence to project; delete later
+    '''
     #show all artists an create a dictionary of choices
     choices = {}
     for i in range(len(games)):
@@ -30,22 +41,27 @@ def search_by_games():
     print("Enter 1, 5 or 0 for all songs")
     num = helper.get_choice([1,5,0])
 
-    #print results
-    query = '''
-    SELECT DISTINCT name
-    FROM songs
-    WHERE Artist =:artist
-    ORDER BY RANDOM()
     '''
-
+ 
+    #print results
+    
+  #  query = '''
+   # SELECT DISTINCT name
+   # FROM songs
+   # WHERE Artist =:artist
+   # ORDER BY RANDOM()
+   # '''
+    
+   
     #run query for songs and print results
+    '''
     dictionary = {"artist":choices[index]}
     if num != 0:
         query += "LIMIT:lim"
         dictionary["lim"] = num
     results = db_ops.name_placeholder_query(query, dictionary)
     helper.pretty_print(results)
-
+    '''
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
     if(percent > .99):
@@ -70,9 +86,11 @@ def permutations():
 #Main Program
 startScreen()
 permutations()
+#print statement unnessary
+#print(calculateWinP(-11))
+calculateWinP(-11)
 
-print(calculateWinP(-11))
-
+#search_by_year() WIP
 
 numGames = input("How many games would you like to bet on?")
 while numGames.isdigit() == False:
