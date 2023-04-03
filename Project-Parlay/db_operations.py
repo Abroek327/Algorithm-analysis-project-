@@ -8,6 +8,12 @@ class db_operations():
         self.cursor = self.connection.cursor()
         print("connection made...")
     
+    #Does a simple query and commits it
+    def simple_query(self, query):
+        self.cursor.execute(query)
+        self.connection.commit()
+        print("query executed...")
+    
     #retrieves a single value from a table
     def single_record(self, query):
         self.cursor.execute(query)
