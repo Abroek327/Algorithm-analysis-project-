@@ -1,8 +1,13 @@
 from helper import helper
 from db_operations import db_operations
+from configurations import configurations
+from game import game
 import itertools
+from prettytable import PrettyTable
 
 db_ops = db_operations("allGameHistory.db")
+allConfigs = []
+bestConfigs = []
 
 def startScreen():
     print("Welcome to your Project Parlay!")
@@ -69,7 +74,7 @@ def calculateWinP(spread):
     else:
           return percent
     
-def permutations(numGames):
+def permutations(numGamesPool, gameList):
     query = '''
     SELECT DISTINCT team_home
     FROM NFLHistory
@@ -77,39 +82,83 @@ def permutations(numGames):
 
     dictionary = {}
     games = db_ops.name_placeholder_query2(query, dictionary)
-    list1 = ["a", "b", "c", "x", "y", "z"]
-    r = numGames
+    #list1 = ["a", "b", "c", "x", "y", "z"]
+    r = numGamesPool
     
-    print("Results..\n")
+    print("\nYour Options..\n")
+    Id = 0
 
     for r in range(r, 0, -1):
-          perm = list(itertools.combinations(list1, r))
-          helper.pretty_print(perm)
+        perm = list(itertools.combinations(gameList, r))
 
+        for i in perm:
+            x = configurations(i, Id)
+            allConfigs.append(x)
+            Id += 1
+            
+    helper.config_print(allConfigs)
+
+def bestConfig(configList):
+      
+
+    while len(bestConfigs) < numParlays:
+        maxProfitChance = 0
+        best = 0
+
+        for x in configList:
+
+            if x.profitChance > maxProfitChance:
+                
+                maxProfitChance = x.profitChance
+                best = x
+
+        if best not in bestConfigs:
+    
+            bestConfigs.append(best)
+            configList.remove(best)
+    
+    print("\n Best Parlays to Bet:\n")
+    helper.config_print(bestConfigs)
     
 
     
 #Main Program
 startScreen()
-permutations()
+#permutations()
 #print statement unnessary
 #print(calculateWinP(-11))
 
 #search_by_year() WIP
 
-numGames = input("How many games would you like to bet on?")
-while numGames.isdigit() == False:
+numParlays = input("How many parlays would you like to bet on?")
+while numParlays.isdigit() == False:
             print("Number of games must be a number. Try again")
-            numGames = input("How many games would you like to bet on?")
+            numParlays = input("How many games would you like to bet on?")
+numGamesPool = input("From How many games would you like us to consider before we calculate best?")
+while numGamesPool.isdigit() == False:
+            print("Number of games to consider must be a number. Try again")
+            numGamesPool = input("From How many games would you like us to consider before we calculate best?")
 numCapital = input("How much capital would you like to bet($)?")
 while numCapital.isdigit() == False:
             print("Captial must be a number. Try again")
             numCapital = input("How much capital would you like to bet($)?")
 
-numGames = int(numGames)
+numParlays = int(numParlays)
 numCapital = int(numCapital)
+numGamesPool = int(numGamesPool)
+gameList =[]
 
-permutations(numGames)
+for x in range(numGamesPool):
+    gameX = game("f","u", 0.5)
+    gameX.favoredTeam = input("Please Enter The Favored Team for game " + str(x) + ": ")
+    gameX.underdog = input("Please Enter The Underdog for game " + str(x) + ": ")
+    gameX.favWinP = int(input("Please enter the win percentage chance for the favored team: "))
+    gameList.append(gameX)
+    
+
+
+permutations(numGamesPool, gameList)
+bestConfig(allConfigs)
 # search_by_games()
 
 

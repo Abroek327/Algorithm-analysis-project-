@@ -1,3 +1,4 @@
+from prettytable import PrettyTable
 # module contains miscellaneous functions
 
 class helper():
@@ -46,3 +47,45 @@ class helper():
         for i in lst:
             print(i)
         print("")
+
+     # function prints a list of configurations nicely
+    @staticmethod
+    def config_print(configList):
+        
+        for y in configList:
+            config = y.games
+            # creating an empty PrettyTable
+            x = PrettyTable()
+            # adding data into the table row by row
+            x.field_names = ["Team", "Win Percentage"]
+
+            for i in config:    
+                x.add_row([i.favoredTeam, i.favWinP])
+            
+            #print config
+            print(x)
+
+        print("\n")
+
+    #Needs work to calculate for underdogs as well, currently assumes every team is a favorite
+    @staticmethod
+    def risk(gameList):
+        risk = 1
+        for game in gameList:
+            risk *= game.favWinP
+
+        return risk
+    
+    @staticmethod
+    def profit(gameList):
+        # Win Percentage = Implied Probability
+        # Implied probability = negative American odds/(negative American odds + 100) * 100
+        # Implied probability = 100 / (positive American odds + 100) * 100
+        # positive American odds = (100/Implied probability) - 100
+        # negative American odds = ???
+        profit = 0
+
+        #for game in gameList:
+            #TODO
+
+        return profit
