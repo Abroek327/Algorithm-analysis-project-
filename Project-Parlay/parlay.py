@@ -53,7 +53,7 @@ def calculateWinP(spread):
     else:
           return percent
     
-def permutations():
+def permutations(numGames):
     query = '''
     SELECT DISTINCT team_home
     FROM NFLHistory
@@ -62,14 +62,19 @@ def permutations():
     dictionary = {}
     games = db_ops.name_placeholder_query2(query, dictionary)
     list1 = ["a", "b", "c", "x", "y", "z"]
-    r = 2
-    perm = list(itertools.permutations(games, r))
-    helper.pretty_print(perm)
+    r = numGames
+    
+    print("Results..\n")
+
+    for r in range(r, 0, -1):
+          perm = list(itertools.combinations(list1, r))
+          helper.pretty_print(perm)
+
+    
 
     
 #Main Program
 startScreen()
-permutations()
 
 print(calculateWinP(-11))
 
@@ -77,15 +82,17 @@ print(calculateWinP(-11))
 numGames = input("How many games would you like to bet on?")
 while numGames.isdigit() == False:
             print("Number of games must be a number. Try again")
-            numCapital = input("How many games would you like to bet on?")
+            numGames = input("How many games would you like to bet on?")
 numCapital = input("How much capital would you like to bet($)?")
 while numCapital.isdigit() == False:
             print("Captial must be a number. Try again")
             numCapital = input("How much capital would you like to bet($)?")
 
+numGames = int(numGames)
+numCapital = int(numCapital)
 
-
-search_by_games()
+permutations(numGames)
+# search_by_games()
 
 
 #deconstruct at end
