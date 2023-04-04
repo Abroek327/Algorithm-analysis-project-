@@ -67,7 +67,9 @@ class helper():
 
         print("\n")
 
-    #Needs work to calculate for underdogs as well, currently assumes every team is a favorite
+
+    #TODO: Needs work to calculate for underdogs as well, currently assumes every team is a favorite
+    #TODO: Needs to be fixed to properly asses risk, is not suggesting optimal parlays currently (check sample output)
     @staticmethod
     def risk(gameList):
         risk = 1

@@ -8,5 +8,7 @@ class configurations:
         self.games = games
         self.potentialProfit100dCapital = helper.profit(games)
         self.profitChance = helper.risk(games)
-    
+        #TODO: Needs to have attribute 'value' that represents (potential profit) * Chance of profit occuring
+        # 'value' will be attribute maximized by simulated annueling
+        
 
