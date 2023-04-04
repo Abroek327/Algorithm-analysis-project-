@@ -42,26 +42,8 @@ def search_by_games():
     num = helper.get_choice([1,5,0])
 
     '''
- 
-    #print results
     
-  #  query = '''
-   # SELECT DISTINCT name
-   # FROM songs
-   # WHERE Artist =:artist
-   # ORDER BY RANDOM()
-   # '''
-    
-   
-    #run query for songs and print results
-    '''
-    dictionary = {"artist":choices[index]}
-    if num != 0:
-        query += "LIMIT:lim"
-        dictionary["lim"] = num
-    results = db_ops.name_placeholder_query(query, dictionary)
-    helper.pretty_print(results)
-    '''
+
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
     if(percent > .99):
