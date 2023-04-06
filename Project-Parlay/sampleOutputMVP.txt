@@ -19,7 +19,7 @@ Please Enter The Favored Team for game 3: E
 Please Enter The Underdog for game 3: N
 Please enter the win percentage chance for the favored team: 57
 
-Your Options..
+Your Options...
 
 +------+----------------+
 | Team | Win Percentage |
