@@ -148,7 +148,7 @@ startScreen()
 #TODO: Each configuration group needs to keep track of its 'string factor'
 #String factor refers to when one instance of a team winning is included in multiple configurations
 #By the nature of parlays, including the same pick in multiple configurations in the same grouping would make it liable for the entire grouping to fail with a single unexpected loss
-#Therefore a high "String Factor" would increase the total risk for the grouping, but shouldn't neccicarily be a dealbreaker if stringing a pick adequately improves total profit possibility
+#Therefore a high "String Factor" would increase the total risk for the grouping, but shouldn't neccicarily be a dealbreaker if stringing a pick adequately improves total profit possibility.
 numParlays = input("How many parlays would you like to bet on?")
 while numParlays.isdigit() == False:
             print("Number of games must be a number. Try again")

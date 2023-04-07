@@ -84,7 +84,7 @@ class helper():
         # Implied probability = negative American odds/(negative American odds + 100) * 100
         # Implied probability = 100 / (positive American odds + 100) * 100
         # positive American odds = (100/Implied probability) - 100
-        # negative American odds = ???
+        # negative American odds = ??
         profit = 0
 
         #for game in gameList:
