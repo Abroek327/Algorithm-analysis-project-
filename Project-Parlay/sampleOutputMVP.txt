@@ -1,0 +1,156 @@
+(base) maxhartel@Maxs-MacBook-Pro-5 Project-Parlay % python3 parlay.py
+connection made...
+Welcome to your Project Parlay!
+How many parlays would you like to bet on?5
+From How many games would you like us to consider before we calculate best?4
+How much capital would you like to bet($)?A
+Captial must be a number. Try again
+How much capital would you like to bet($)?34
+Please Enter The Favored Team for game 0: A
+Please Enter The Underdog for game 0: B
+Please enter the win percentage chance for the favored team: 78
+Please Enter The Favored Team for game 1: S
+Please Enter The Underdog for game 1: K
+Please enter the win percentage chance for the favored team: 92
+Please Enter The Favored Team for game 2: T
+Please Enter The Underdog for game 2: P
+Please enter the win percentage chance for the favored team: 89
+Please Enter The Favored Team for game 3: E
+Please Enter The Underdog for game 3: N
+Please enter the win percentage chance for the favored team: 57
+
+Your Options...
+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  T   |       89       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  T   |       89       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  T   |       89       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  T   |       89       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  E   |       57       |
++------+----------------+
+
+
+
+ Best Parlays to Bet:
+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  T   |       89       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  S   |       92       |
+|  E   |       57       |
++------+----------------+
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  A   |       78       |
+|  T   |       89       |
+|  E   |       57       |
++------+----------------+
