@@ -10,5 +10,6 @@ class configurations:
         self.profitChance = helper.risk(games)
         #TODO: Needs to have attribute 'value' that represents (potential profit) * Chance of profit occuring
         # 'value' will be attribute maximized by simulated annueling
+        self.value = self.potentialProfit100dCapital * self.profitChance
         
 
