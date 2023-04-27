@@ -1,6 +1,3 @@
-from prettytable import PrettyTable
-# module contains miscellaneous functions
-
 class helper():
     # function parses a string and converts to appropriate type
     @staticmethod

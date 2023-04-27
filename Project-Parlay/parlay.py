@@ -3,14 +3,21 @@ from db_operations import db_operations
 from configurations import configurations
 from game import game
 import itertools
-from prettytable import PrettyTable
+from flask import Flask
+from flask import render_template
+app = Flask(__name__)
 
 db_ops = db_operations("allGameHistory.db")
 allConfigs = []
 bestConfigs = []
 
+@app.route('/')
 def startScreen():
-    print("Welcome to your Project Parlay!")
+    message = "Welcome to your Project Parlay!"
+    return render_template('index.html', message=message)
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 def search_by_year():
@@ -48,13 +55,14 @@ def search_by_games():
 
     '''
     
-
+@app.route('/')
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
     if(percent > .99):
-          return .99
+          return render_template('index.html', percent=.99)
     else:
-          return percent
+          return render_template('index.html', percent=percent)
+    
     
 def permutations(numGamesPool, gameList):
     query = '''
@@ -131,6 +139,7 @@ startScreen()
 #String factor refers to when one instance of a team winning is included in multiple configurations
 #By the nature of parlays, including the same pick in multiple configurations in the same grouping would make it liable for the entire grouping to fail with a single unexpected loss
 #Therefore a high "String Factor" would increase the total risk for the grouping, but shouldn't neccicarily be a dealbreaker if stringing a pick adequately improves total profit possibility.
+
 numParlays = input("How many parlays would you like to bet on?")
 while numParlays.isdigit() == False:
             print("Number of games must be a number. Try again")
@@ -158,13 +167,15 @@ for x in range(numGamesPool):
     
 
 
-permutations(numGamesPool, gameList)
+returnpermutations(numGamesPool, gameList)
 bestConfig(allConfigs)
 # search_by_games()
 
 
 #deconstruct at end
 db_ops.destructor()
+
+
 
 
 #TODO: Need to design and Implement simple, clean, dynamic, colorful, interactive, web-based, easilly accessable with an internet connection, UI
