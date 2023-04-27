@@ -2,8 +2,10 @@
 
 
 ## How to Run
+* Install Flask with **pip install flask**
 * Open a terminal inside the Project_parlay Folder
 * Run python parlay.py
+* Go to your browser and go to **http://localhost:5000/**
 * Follow instructions when prompted
 
 
