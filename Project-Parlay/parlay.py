@@ -3,18 +3,14 @@ from db_operations import db_operations
 from configurations import configurations
 from game import game
 import itertools
-from flask import Flask
-from flask import render_template
-app = Flask(__name__)
 
 db_ops = db_operations("allGameHistory.db")
 allConfigs = []
 bestConfigs = []
 
-@app.route('/')
+
 def startScreen():
     message = "Welcome to your Project Parlay!"
-    return render_template('index.html', message=message)
 
 if __name__ == '__main__':
     app.run(debug=True)
@@ -55,13 +51,13 @@ def search_by_games():
 
     '''
     
-@app.route('/')
+
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
     if(percent > .99):
-          return render_template('index.html', percent=.99)
+          return .99
     else:
-          return render_template('index.html', percent=percent)
+          return percent
     
     
 def permutations(numGamesPool, gameList):
