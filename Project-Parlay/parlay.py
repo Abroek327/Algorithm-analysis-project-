@@ -1,23 +1,25 @@
 from helper import helper
 from db_operations import db_operations
 from configurations import configurations
+from outcome import outcome
 from game import game
 import itertools
-from flask import Flask
-from flask import render_template
-app = Flask(__name__)
+from prettytable import PrettyTable
+#from flask import Flask
+#from flask import render_template
+#app = Flask(__name__)
 
 db_ops = db_operations("allGameHistory.db")
 allConfigs = []
 bestConfigs = []
 
-@app.route('/')
+#@app.route('/')
 def startScreen():
     message = "Welcome to your Project Parlay!"
-    return render_template('index.html', message=message)
+    #return render_template('index.html', message=message)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+    #app.run(debug=True)
 
 
 def search_by_year():
@@ -55,16 +57,16 @@ def search_by_games():
 
     '''
     
-@app.route('/')
-def calculateWinP(spread):
-    percent = (-.0303*spread) + .50
-    if(percent > .99):
-          return render_template('index.html', percent=.99)
-    else:
-          return render_template('index.html', percent=percent)
+# #@app.route('/')
+# def calculateWinP(spread):
+#     percent = (-.0303*spread) + .50
+#     if(percent > .99):
+#           return render_template('index.html', percent=.99)
+#     else:
+#           return render_template('index.html', percent=percent)
     
     
-def permutations(numGamesPool, gameList):
+def permutations(numGamesPool, outcomesList):
     query = '''
     SELECT DISTINCT team_home
     FROM NFLHistory
@@ -74,45 +76,50 @@ def permutations(numGamesPool, gameList):
     games = db_ops.name_placeholder_query2(query, dictionary)
     #list1 = ["a", "b", "c", "x", "y", "z"]
 
-    r = numGamesPool
+    numOutcomesPool = 2 * numGamesPool
     
     print("\nYour Options..\n")
     Id = 0
 
     #Generates all unique combination of elements in set up to set size 'r'
-    for r in range(r, 0, -1):
+    for numOutcomesPool in range(numOutcomesPool, 0, -1):
         #TODO: May need to check if this is most efficient way to generate all combinations
         #TODO: Needs to use Delayed Column Generation Via Knapsack algorithm or other comination set approximation algorithm if total set of combinations is too large to be practical to generate quickly
 
-        perm = list(itertools.combinations(gameList, r))
+        perm = list(itertools.combinations(outcomesList, numOutcomesPool))
 
         #TODO: Needs to utilize SQL insert to store configurations instead of list
         for i in perm:
-            x = configurations(i, Id)
-            allConfigs.append(x)
-            Id += 1
+            gameIDs = helper.gameIDs(i)
+
+            #TODO: the if-statement in this for-loop checks the list for multiple outcomes with duplicate gameIDs (Which would make it impossible for both outcomes to occur), we need to research if there is a more efficient way to do this
+            if(len(gameIDs) == len(set(gameIDs))):
+                  
+                x = configurations(i, Id)
+                allConfigs.append(x)
+                Id += 1
 
     #TODO: Needs to pull from SQL Database instead of list before printing
     helper.config_print(allConfigs)
 
 
 #TODO: Needs to pull from SQL Database instead of list of configs
-#TODO: Needs to evaluate based on (potential profit)/(risk) ratio, currently calculates on lowest risk only
+#TODO: (SOLVED) Needs to evaluate based on (potential profit)/(risk) ratio, currently calculates on lowest risk only
 #TODO: Needs to use simulated annueling to approximate best configs when total set of configs is too large to be practical
-#TODO: Needs to find a generalized way to find relative potential profit from a configuration before we assign a share of capital to it (Maybe Average?)
+#TODO: (SOLVED) Needs to find a generalized way to find relative potential profit from a configuration before we assign a share of capital to it (Maybe Average?)
 #TODO: Needs to use stock cutting algorithm to find final most optimal grouping from set of "best parlays" to fit user specifications
 def bestConfig(configList):
       
 
     while len(bestConfigs) < numParlays:
-        maxProfitChance = 0
+        maxValue = 0
         best = 0
 
         for x in configList:
 
-            if x.profitChance > maxProfitChance:
+            if x.value > maxValue:
                 
-                maxProfitChance = x.profitChance
+                maxValue = x.value
                 best = x
 
         if best not in bestConfigs:
@@ -148,26 +155,36 @@ numGamesPool = input("From How many games would you like us to consider before w
 while numGamesPool.isdigit() == False:
             print("Number of games to consider must be a number. Try again")
             numGamesPool = input("From How many games would you like us to consider before we calculate best?")
-numCapital = input("How much capital would you like to bet($)?")
-while numCapital.isdigit() == False:
+totalUserCapital = input("How much capital would you like to bet($)?")
+while totalUserCapital.isdigit() == False:
             print("Captial must be a number. Try again")
-            numCapital = input("How much capital would you like to bet($)?")
+            totalUserCapital = input("How much capital would you like to bet($)?")
 
 numParlays = int(numParlays)
-numCapital = int(numCapital)
+totalUserCapital = int(totalUserCapital)
 numGamesPool = int(numGamesPool)
-gameList =[]
+gameList = []
+outcomeList = []
 
+#initializes all game objects from user input, and thus al outcome objecs are internally initialized inside the game initialization function
 for x in range(numGamesPool):
-    gameX = game("f","u", 0.5)
-    gameX.favoredTeam = input("Please Enter The Favored Team for game " + str(x) + ": ")
-    gameX.underdog = input("Please Enter The Underdog for game " + str(x) + ": ")
-    gameX.favWinP = int(input("Please enter the win percentage chance for the favored team: "))
+    favoredTeam = input("Please Enter The Favored Team for game " + str(x) + ": ")
+    underdog = input("Please Enter The Underdog for game " + str(x) + ": ")
+
+    favoredWinP = int(input("Please enter the win percentage chance for the favored team: "))
+    while favoredWinP < 50:
+            print("Favored Win Percentage must be 50 or higher. Try again")
+            favoredWinP = int(input("Please enter the win percentage chance for the favored team: "))
+            
+    gameX = game(favoredTeam, underdog, favoredWinP, x)
     gameList.append(gameX)
+
+for gameInstance in gameList:
+    outcomeList.extend(gameInstance.outcomes)
     
 
 
-returnpermutations(numGamesPool, gameList)
+permutations(numGamesPool, outcomeList)
 bestConfig(allConfigs)
 # search_by_games()
 
