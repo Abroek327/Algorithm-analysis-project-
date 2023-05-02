@@ -82,20 +82,58 @@ db_ops = db_operations('allGameHistory.db')
 # db_ops.commit()
 # #print('committed')
 
-query = '''
-SELECT Winner_ID FROM NflHistoricalOffical
-'''
-results = db_ops.single_attribute(query)
-del results[0]
-print(results)
-for i in range(len(results)):
-    print(i)
+# query = '''
+# SELECT Winner_ID FROM NflHistoricalOffical
+# '''
+# results = db_ops.single_attribute(query)
+# del results[0]
+# print(results)
+# for i in range(len(results)):
+#     print(i)
 
+#     query = '''
+#     UPDATE NflHistoricalOffical
+#     SET Winner_ID = ?
+#     WHERE Game_ID = ?
+#     '''
+#     placeholders = [results[i], i + 1]
+#     db_ops.name_placeholder_query(query, placeholders)
+# db_ops.commit()
+
+
+query = '''
+SELECT team_home
+FROM spreadspoke_scores_gameID
+'''
+team_home = db_ops.single_attribute(query)
+
+query = '''
+SELECT team_away
+FROM spreadspoke_scores_gameID
+'''
+team_away = db_ops.single_attribute(query)
+
+query = '''
+SELECT team_favorite_id
+FROM spreadspoke_scores_gameID
+'''
+team_favorite_id = db_ops.single_attribute(query)
+for i in range(len(team_home)):
+    currHomeTeamCode = dictionary[team_home[i]]
+    currAwayTeamCode = dictionary[team_away[i]]
+    print(currHomeTeamCode, currAwayTeamCode)
+    # if the home team isn't the favorite, the underdog is the home team
+    # if the home team is the favorite, the underdog is the away team
+    if (currHomeTeamCode == team_favorite_id[i]):
+        underdog = currAwayTeamCode
+    else:
+        underdog = currHomeTeamCode
     query = '''
     UPDATE NflHistoricalOffical
-    SET Winner_ID = ?
+    SET Underdog_ID = ?
     WHERE Game_ID = ?
     '''
-    placeholders = [results[i], i + 1]
+    placeholders = [underdog, i + 1]
     db_ops.name_placeholder_query(query, placeholders)
+
 db_ops.commit()
