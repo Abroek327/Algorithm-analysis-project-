@@ -1,58 +1,48 @@
-#found at https://machinelearningmastery.com/simulated-annealing-from-scratch-in-python/
-import numpy as np
-import math as math
+import random
+import math
+from configurations import configurations
+
+#Simulated Annueling Algorithm that finds best configuration from a set of total outputs
+def outputs_simulated_annealing(initial_config, allOutputsList, bestConfigurationsList, temperature):
+    current_config = initial_config
+    best_config = initial_config
+    temperature_init = temperature
+    countIter = 0
+
+    while temperature > 0.1:
+        cooling_rate = temperature / math.log(1 + countIter)
+
+        neighbor_config = get_neighbor(current_config, allOutputsList)
+        current_value = configurations.value(current_config)
+        neighbor_value = configurations.value(neighbor_config)
+
+        if neighbor_value > current_value:
+            current_config = neighbor_config
+
+            if neighbor_value > configurations.value(best_config):
+               #potential solution to 2nd best issue: if neighbor config is the same as a config in the existing "best configs set",
+               # then do not set best_config to neighbor config and continue 
+               best_config = neighbor_config
+
+        else:
+            delta_value = (current_value - neighbor_value)
+            acceptance_probability = math.exp(-delta_value / temperature)
+
+            if random.uniform(0, 1) < acceptance_probability:
+               current_config = neighbor_config
+
+        temperature *= cooling_rate
+        countIter += 1
+
+    return best_config
 
 
-# simulated annealing algorithm
-def simulated_annealing(objective, bounds, n_iterations, step_size, temp):
- # generate an initial point
- best = bounds[:, 0] + np.rand(len(bounds)) * (bounds[:, 1] - bounds[:, 0])
+
+def get_neighbor(config, allOutputsList):
+    # Generate a random 'neighbor' of the current config
+    # Configs are 'Neighbors if they only differ by one output
+
+   length = len(allOutputsList)
+   rand = random.randint(0,length)
 
 
- # evaluate the initial point
- best_eval = objective(best)
-
-
- # current working solution
- curr, curr_eval = best, best_eval
-
-
- # run the algorithm
- for i in range(n_iterations):
- # take a step
-    candidate = curr + np.randn(len(bounds)) * step_size
-
-
- # evaluate candidate point
- candidate_eval = objective(candidate)
-
-
- # check for new best solution
- if candidate_eval < best_eval:
- # store new best point
-    best, best_eval = candidate, candidate_eval
-
-
- # report progress
- print('>%d f(%s) = %.5f' % (i, best, best_eval))
-
-
- # difference between candidate and current point evaluation
- diff = candidate_eval - curr_eval
-
-
- # calculate temperature for current epoch
- t = temp / float(i + 1)
-
-
- # calculate metropolis acceptance criterion
- metropolis = math.exp(-diff / t)
-
-
- # check if we should keep the new point
- if diff < 0 or np.rand() < metropolis:
- # store the new current point
-    curr, curr_eval = candidate, candidate_eval
-
-
- return [best, best_eval]
