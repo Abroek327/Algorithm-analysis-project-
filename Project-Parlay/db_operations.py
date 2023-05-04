@@ -30,7 +30,7 @@ class db_operations():
         self.cursor.execute(query)
         results = self.cursor.fetchall()
         results = [i[0] for i in results]
-        results.remove(None)
+        #results.remove(None)
         return results
     
     #returns the results of a query with first column
@@ -58,7 +58,19 @@ class db_operations():
         self.connection.commit()
         return "" + attribute + " updated.\n"
 
-    
+    def commit(self):
+        self.connection.commit()
+
     #destructor that closes connection to database
     def destructor(self):
         self.connection.close()
+
+
+# def calculateWinP(spread):
+#      percent = (-.0303*spread) + .50
+#      if(percent > .99):
+#            return render_template('index.html', percent=.99)
+#      else:
+#            return render_template('index.html', percent=percent)
+
+#def calculateWinP(spread):
