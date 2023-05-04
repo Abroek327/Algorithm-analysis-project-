@@ -2,21 +2,35 @@ from db_operations import db_operations
 import random
 
 class configurations:
+    cID = 0
         
     def americanOddsToString(config):
 
-        if(config.AmericanOdds > 0):
-            return "+" + str(round(config.AmericanOdds, 2))
+        if(type(config.AmericanOdds) != str):
+
+            if(config.AmericanOdds > 0):
+                return "+" + str(round(config.AmericanOdds, 2))
+            else:
+                return "-" + str(-1 * round(config.AmericanOdds, 2))
+            
         else:
-            return "-" + str(-1 * round(config.AmericanOdds, 2))
-        
+            return config.AmericanOdds
+
+            
     #TODO: Make accurate 'value' function from historical/theoretical factors using data science and back testing
     # Profit/risk are different representations of the same stat, so their ratio will always be 10
     #config.value = config.theoreticalProfit * config.profitChance
     def value(config):
-        config.value = config.theoreticalProfit
-        value = config.value
-        return value
+        config.value = (1 - config.profitChance)
+        
+        return config.value
+    
+
+    def configID(config):
+        configurations.cID += 1
+
+        return configurations.cID
+
         
     #Calculates potential profit for parlay assuming "True Odds"
     #TODO Add web-Scraper support for the fixed odds of popular online casinos, maybe store tables of fixed odds for different size parlays and update as frequently as needed
@@ -76,19 +90,34 @@ class configurations:
 
 
     
-    def __init__(self, outcomeList, configID):
+    def __init__(self, outcomeList):
         self.numOutcomes = len(outcomeList)
-        self.configID = configID
+        self.configID = configurations.configID(self)
         self.outcomeList = outcomeList
-        self.theoreticalProfit = "Not Yet Assigned"
-        self.profitChance = configurations.risk(outcomeList)
-        self.AmericanOdds = "Not Yet Assigned"
-        self.ImpliedProbability = "Not Yet Assigned"
-        self.decimalOdds = "Not Yet Assigned"
-        #TODO: Needs to have attribute 'value' that represents parlay quality
-        # 'value' will be attribute maximized by simulated annueling
-        self.value = "Not Yet Assigned"
+        
+        #checks for empty configuration
+        if(self.numOutcomes > 0):
 
-        configurations.profit(self)
+            self.profitChance = configurations.risk(outcomeList)
+            self.theoreticalProfit = "Not Yet Assigned"
+            self.AmericanOdds = "Not Yet Assigned"
+            self.ImpliedProbability = "Not Yet Assigned"
+            self.decimalOdds = "Not Yet Assigned"
+            #TODO: Needs to have attribute 'value' that represents parlay quality
+            # 'value' will be attribute maximized by simulated annueling
+            self.value = "Not Yet Assigned"
+
+            configurations.profit(self)
+
+        else:
+            self.profitChance = "Not Yet Assigned"
+            self.theoreticalProfit = "Not Yet Assigned"
+            self.AmericanOdds = "Not Yet Assigned"
+            self.ImpliedProbability = "Not Yet Assigned"
+            self.decimalOdds = "Not Yet Assigned"
+            #TODO: Needs to have attribute 'value' that represents parlay quality
+            # 'value' will be attribute maximized by simulated annueling
+            self.value = 0
+
 
 

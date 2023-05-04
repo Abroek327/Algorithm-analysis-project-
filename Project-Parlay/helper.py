@@ -65,14 +65,28 @@ class helper():
                 x.add_row([i.name, i.ImpliedProbability])
             
             #print config
-            print("\n|Parlay Odds: " + configurations.americanOddsToString(y) + "|\n|Value: " + str(round(y.value, 2)) + 
-                  "|\n|Theoretical Payout: $" + str(round(y.theoreticalProfit, 2)) + "|"
-                  "|\n|Decimal Odds: " + str(round(y.decimalOdds, 2)) + "|")
+            if(type(y.value == str)):
+                print("\n|Parlay Odds: " + str(configurations.americanOddsToString(y)) + "|\n|Value: " + str(y.value) + 
+                "|\n|Theoretical Payout: $" + str(y.theoreticalProfit) + "|" +
+                "|\n|Decimal Odds: " + str(y.decimalOdds) + "|" +
+                "|\n|Cid: " + str(y.configID) + "|")
+            else:
+                print("\n|Parlay Odds: " + configurations.americanOddsToString(y) + "|\n|Value: " + str(round(y.value, 2)) + 
+                "|\n|Theoretical Payout: $" + str(round(y.theoreticalProfit, 2)) + "|" +
+                "|\n|Decimal Odds: " + str(round(y.decimalOdds, 2)) + "|" +
+                "|\n|Cid: " + str(y.configID) + "|")
+
             print(x)
 
+    def outputListPrint(i, outcomeList):
+        s = "["
+        for outcome in outcomeList:
+            s = s + outcome.name
+            s = s + ","
+        s = s + "]"
 
+        print(i + s)
 
-        print("\n")
     
     @staticmethod
     def gameIDs(outcomesList):
@@ -82,3 +96,4 @@ class helper():
             gameIdList.append(outcome.gameID)
         
         return gameIdList
+    

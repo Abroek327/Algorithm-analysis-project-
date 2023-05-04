@@ -5,13 +5,16 @@ from outcome import outcome
 from game import game
 import itertools
 from prettytable import PrettyTable
+from outputs_simulated_annealing import outputs_SA
 #from flask import Flask
 #from flask import render_template
 #app = Flask(__name__)
 
 db_ops = db_operations("allGameHistory.db")
 allConfigs = []
-bestConfigs = []
+bestConfigsBF = []
+bestConfigsSA = []
+
 
 #@app.route('/')
 def startScreen():
@@ -79,9 +82,8 @@ def permutations(numGamesPool, outcomesList):
     numOutcomesPool = 2 * numGamesPool
     
     print("\nYour Options..\n")
-    Id = 0
 
-    #Generates all unique combination of elements in set up to set size 'r'
+    #Generates all unique combination of elements in set up to set size numOutcomesPool
     for numOutcomesPool in range(numOutcomesPool, 0, -1):
         #TODO: May need to check if this is most efficient way to generate all combinations
         #TODO: Needs to use Delayed Column Generation Via Knapsack algorithm or other comination set approximation algorithm if total set of combinations is too large to be practical to generate quickly
@@ -95,9 +97,8 @@ def permutations(numGamesPool, outcomesList):
             #TODO: the if-statement in this for-loop checks the list for multiple outcomes with duplicate gameIDs (Which would make it impossible for both outcomes to occur), we need to research if there is a more efficient way to do this
             if(len(gameIDs) == len(set(gameIDs))):
                   
-                x = configurations(i, Id)
+                x = configurations(i)
                 allConfigs.append(x)
-                Id += 1
 
     #TODO: Needs to pull from SQL Database instead of list before printing
     helper.config_print(allConfigs)
@@ -108,10 +109,10 @@ def permutations(numGamesPool, outcomesList):
 #TODO: Needs to use simulated annueling to approximate best configs when total set of configs is too large to be practical
 #TODO: (SOLVED) Needs to find a generalized way to find relative potential profit from a configuration before we assign a share of capital to it (Maybe Average?)
 #TODO: Needs to use stock cutting algorithm to find final most optimal grouping from set of "best parlays" to fit user specifications
-def bestConfig(configList):
+def bestConfig(configList,outcomeList):
       
-
-    while len(bestConfigs) < numParlays:
+    #Brute force evaluate all configs and then select best ones:
+    while len(bestConfigsBF) < numParlays:
         maxValue = 0
         best = 0
 
@@ -122,13 +123,22 @@ def bestConfig(configList):
                 maxValue = x.value
                 best = x
 
-        if best not in bestConfigs:
+        if best not in bestConfigsBF:
     
-            bestConfigs.append(best)
+            bestConfigsBF.append(best)
             configList.remove(best)
+
+    #Dynamic best config finder using simulated annueling
+    configX = configurations([])
+    bestConfigsSA = []
+    bestConfigsSA.append(outputs_SA.outputs_simulated_annealing(configX, outcomeList, bestConfigsSA, 100))
+
     
-    print("\n Best Parlays to Bet:\n")
-    helper.config_print(bestConfigs)
+    print("\n Best Parlays to Bet (BF):\n")
+    helper.config_print(bestConfigsBF)
+
+    print("\n Best Parlays to Bet (SA):\n")
+    helper.config_print(bestConfigsSA)
     
 
     
@@ -175,7 +185,7 @@ for x in range(numGamesPool):
     while favoredWinP < 50:
             print("Favored Win Percentage must be 50 or higher. Try again")
             favoredWinP = int(input("Please enter the win percentage chance for the favored team: "))
-            
+
     gameX = game(favoredTeam, underdog, favoredWinP, x)
     gameList.append(gameX)
 
@@ -185,7 +195,7 @@ for gameInstance in gameList:
 
 
 permutations(numGamesPool, outcomeList)
-bestConfig(allConfigs)
+bestConfig(allConfigs, outcomeList)
 # search_by_games()
 
 
