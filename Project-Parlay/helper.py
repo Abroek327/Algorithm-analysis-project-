@@ -97,3 +97,32 @@ class helper():
         
         return gameIdList
     
+    @staticmethod
+    def outcomeIDs(outcomesList):
+        outcomeIdList = []
+
+        for outcome in outcomesList:
+            outcomeIdList.append(outcome.outcomeID)
+        
+        return outcomeIdList
+    
+    @staticmethod
+    def offset(configA, configB):
+        SA_Offset = 0
+
+        #increments SA_Offset if the best solution contains a outcome that it does not
+        for o in helper.outcomeIDs(configA.outcomeList):
+            exist_count = (helper.outcomeIDs(configB.outcomeList)).count(o)
+
+            if(exist_count <= 0):
+                SA_Offset += 1
+
+        #increments SA_Offset if the it contains a outcome that best solution does not
+        for o in helper.outcomeIDs(configB.outcomeList):
+            exist_count = (helper.outcomeIDs(configA.outcomeList)).count(o)
+
+            if(exist_count <= 0):
+                SA_Offset += 1
+
+        return SA_Offset
+    
