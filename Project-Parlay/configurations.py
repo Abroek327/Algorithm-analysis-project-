@@ -1,5 +1,6 @@
 from db_operations import db_operations
 import random
+import copy
 
 class configurations:
     cID = 0
@@ -25,8 +26,67 @@ class configurations:
         
         return config.value
     
+    #Sorts a list of configs by value - is not essential if needs to be cut due to efficiency concerns
+    def sort(configList):
+        cList = copy.deepcopy(configList)
 
-    def configID(config):
+        # Define a variable to keep track of whether a swap has occurred
+        swapped = True
+
+        # Keep looping until no swaps occur during a full pass through the list
+        while swapped:
+
+            # Assume no swaps occur during this pass
+            swapped = False
+
+            # Iterate through the list, comparing adjacent elements
+            for i in range(len(cList) - 1):
+
+                if cList[i].value > cList[i + 1].value:
+
+                    # If the current element is greater than the next element, swap them
+                    temp = copy.deepcopy(cList[i])
+                    cList[i] = copy.deepcopy(cList[i + 1])
+                    cList[i + 1] =  copy.deepcopy(temp)
+
+                    # Set swapped to True, indicating that a swap has occurred during this pass
+                    swapped = True
+
+        #sort outcomes within configs 
+        for config in cList:
+            oList = list(copy.deepcopy(config.outcomeList))
+
+            # Define a variable to keep track of whether a swap has occurred
+            oSwapped = True
+
+            # Keep looping until no swaps occur during a full pass through the list
+            while oSwapped:
+
+                # Assume no swaps occur during this pass
+                oSwapped = False
+
+                # Iterate through the list, comparing adjacent elements
+                for i in range(len(oList) - 1):
+
+                    if oList[i].ImpliedProbability  > oList[i + 1].ImpliedProbability:
+
+                        # If the current element is greater than the next element, swap them
+                        temp = copy.deepcopy(oList[i])
+                        oList[i] = copy.deepcopy(oList[i + 1])
+                        oList[i + 1] =  copy.deepcopy(temp)
+
+                        # Set swapped to True, indicating that a swap has occurred during this pass
+                        oSwapped = True
+
+            config.outcomeList = oList
+
+
+        # return the sorted list
+        return(cList)
+        
+    
+
+    def configID():
         configurations.cID += 1
 
         return configurations.cID
@@ -76,6 +136,46 @@ class configurations:
 
         configurations.value(config)
 
+    #determines if two configs are the same
+    @staticmethod
+    def equals(configA, configB):
+        setA = set(configurations.outcomeIDs(configA.outcomeList))
+        setB = set(configurations.outcomeIDs(configB.outcomeList))
+
+        if(setA == setB):
+            return True
+        else:
+            return False
+        
+    @staticmethod
+    def outcomeIDs(outcomesList):
+        outcomeIdList = []
+
+        for outcome in outcomesList:
+            outcomeIdList.append(outcome.outcomeID)
+        
+        return outcomeIdList
+    
+    @staticmethod
+    def offset(configA, configB):
+        SA_Offset = 0
+
+        #increments SA_Offset if the best solution contains a outcome that it does not
+        for o in configurations.outcomeIDs(configA.outcomeList):
+            exist_count = (configurations.outcomeIDs(configB.outcomeList)).count(o)
+
+            if(exist_count <= 0):
+                SA_Offset += 1
+
+        #increments SA_Offset if the it contains a outcome that best solution does not
+        for o in configurations.outcomeIDs(configB.outcomeList):
+            exist_count = (configurations.outcomeIDs(configA.outcomeList)).count(o)
+
+            if(exist_count <= 0):
+                SA_Offset += 1
+
+        return SA_Offset
+
 
     #TODO(SOLVED): Needs work to calculate for underdogs as well, currently assumes every team is a favorite
     #TODO(SOLVED): Needs to be fixed to properly asses risk
@@ -92,7 +192,7 @@ class configurations:
     
     def __init__(self, outcomeList):
         self.numOutcomes = len(outcomeList)
-        self.configID = configurations.configID(self)
+        self.configID = configurations.configID()
         self.outcomeList = outcomeList
         
         #checks for empty configuration

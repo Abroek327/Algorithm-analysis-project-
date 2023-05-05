@@ -6,7 +6,7 @@ from game import game
 import itertools
 
 from prettytable import PrettyTable
-from outputs_simulated_annealing import outputs_SA
+from multi_outputs_simulated_annealing import outputs_SA
 #from flask import Flask
 #from flask import render_template
 #app = Flask(__name__)
@@ -24,13 +24,6 @@ bestConfigsSA = []
 def startScreen():
     message = "Welcome to your Project Parlay!"
     #return render_template('index.html', message=message)
-=======
-def startScreen():
-    message = "Welcome to your Project Parlay!"
-
-
-#if __name__ == '__main__':
-    #app.run(debug=True)
 
 
 def search_by_year():
@@ -76,7 +69,6 @@ def search_by_games():
 #           return render_template('index.html', percent=.99)
 #     else:
 #           return render_template('index.html', percent=percent)
-=======
 
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
@@ -149,14 +141,28 @@ def bestConfig(configList,outcomeList):
     #Dynamic best config finder using simulated annueling
     configX = configurations([])
     bestConfigsSA = []
-    bestConfigsSA.append(outputs_SA.outputs_simulated_annealing(configX, outcomeList, bestConfigsSA, 100))
 
-    
+    while len(bestConfigsSA) < numParlays:
+        bestConfigsSA.append(outputs_SA.outputs_simulated_annealing(configX, outcomeList, bestConfigsSA, 0.1))
+
+    bestConfigs_BF = configurations.sort(bestConfigsBF)
+    bestConfigs_SA = configurations.sort(bestConfigsSA)
+
+
     print("\n Best Parlays to Bet (BF):\n")
-    helper.config_print(bestConfigsBF)
+    helper.config_print(bestConfigs_BF)
 
     print("\n Best Parlays to Bet (SA):\n")
-    helper.config_print(bestConfigsSA)
+    helper.config_print(bestConfigs_SA)
+
+    numSameConfigs = 0
+    for config in bestConfigsBF:
+          for parlay in bestConfigsSA:
+                if (configurations.equals(config,parlay)):
+                      numSameConfigs += 1
+        
+    print("\n Num Parlays: " + str(numParlays) + "\n Num Shared: " + str(numSameConfigs))
+          
     
 
     
