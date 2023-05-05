@@ -4,11 +4,14 @@ from configurations import configurations
 from outcome import outcome
 from game import game
 import itertools
+
 from prettytable import PrettyTable
 from outputs_simulated_annealing import outputs_SA
 #from flask import Flask
 #from flask import render_template
 #app = Flask(__name__)
+
+
 
 db_ops = db_operations("allGameHistory.db")
 allConfigs = []
@@ -16,10 +19,15 @@ bestConfigsBF = []
 bestConfigsSA = []
 
 
+
 #@app.route('/')
 def startScreen():
     message = "Welcome to your Project Parlay!"
     #return render_template('index.html', message=message)
+=======
+def startScreen():
+    message = "Welcome to your Project Parlay!"
+
 
 #if __name__ == '__main__':
     #app.run(debug=True)
@@ -60,6 +68,7 @@ def search_by_games():
 
     '''
     
+
 # #@app.route('/')
 # def calculateWinP(spread):
 #     percent = (-.0303*spread) + .50
@@ -67,6 +76,15 @@ def search_by_games():
 #           return render_template('index.html', percent=.99)
 #     else:
 #           return render_template('index.html', percent=percent)
+=======
+
+def calculateWinP(spread):
+    percent = (-.0303*spread) + .50
+    if(percent > .99):
+          return .99
+    else:
+          return percent
+
     
     
 def permutations(numGamesPool, outcomesList):
