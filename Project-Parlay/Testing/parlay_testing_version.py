@@ -1,17 +1,17 @@
-from helper import helper
+from helper_testing import helper
 from db_operations_testing import db_operations
-from configurations import configurations
-from outcome import outcome
-from game import game
+from configurations_testing import configurations
+from outcome_testing import outcome
+from game_testing import game
 import itertools
 from prettytable import PrettyTable
-from outputs_simulated_annealing_testing import outputs_SA
+from SA_MP_testing_version import outputs_SA
 import time
 #from flask import Flask
 #from flask import render_template
 #app = Flask(__name__)
 
-db_ops = db_operations("allGameHistory.db")
+#db_ops = db_operations("allGameHistory.db")
 allConfigs = []
 bestConfigsBF = []
 bestConfigsSA = []
@@ -31,7 +31,7 @@ def search_by_year():
        #query="SELECT * FROM NFLHistory WHERE schedule_date LIKE '%/"+year+"'"
        query="SELECT * FROM NFLHistory WHERE schedule_date LIKE '%" +1/15/67+"'"
 
-       print(db_ops.simple_query(query))
+       #print(db_ops.simple_query(query))
       # helper.pretty_print(results)
     
 def search_by_games():
@@ -44,7 +44,7 @@ def search_by_games():
 
     print("Games in database: ")
     dictionary = {}
-    games = db_ops.name_placeholder_query2(query, dictionary)
+    #games = db_ops.name_placeholder_query2(query, dictionary)
     
     #commenting out for lack of relevence to project; delete later
     '''
@@ -77,7 +77,7 @@ def permutations(numGamesPool, outcomesList):
     '''
 
     dictionary = {}
-    games = db_ops.name_placeholder_query2(query, dictionary)
+    #games = db_ops.name_placeholder_query2(query, dictionary)
     #list1 = ["a", "b", "c", "x", "y", "z"]
 
     numOutcomesPool = 2 * numGamesPool
@@ -109,7 +109,7 @@ def calculate_runtime(func, configX, outcomeList, bestConfigsSA, T_0):
     x = func(configX, outcomeList, bestConfigsSA, T_0)
     end_time = time.time()
     runtime = end_time - start_time
-    print(f"{runtime:.4f}s")
+    print(f"{runtime:.4f}")
     print(f"{outputs_SA.getThresh():.3f}")
 
     return x
@@ -143,23 +143,24 @@ def bestConfig(configList,outcomeList):
     #Dynamic best config finder using simulated annueling
     configX = configurations([])
     bestConfigsSA = []
-    bestConfigsSA.append(calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, 100))
 
-    
-    # print("\n Best Parlays to Bet (BF):\n")
-    # helper.config_print(bestConfigsBF)
+    while len(bestConfigsSA) < numParlays:
+        bestConfigsSA.append(calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, outputs_SA.getThresh()))
 
-    # print("\n Best Parlays to Bet (SA):\n")
-    # helper.config_print(bestConfigsSA)
 
     SA_Correctness = 1 - (bestConfigsBF[0].value - bestConfigsSA[0].value)
-    SA_Offset = helper.offset(bestConfigsBF[0],bestConfigsSA[0])
+    SA_Offset = configurations.multiOffset(bestConfigsBF,bestConfigsSA)
 
-    # print(helper.outcomeIDs(bestConfigsBF[0].outcomeList))
-    # print(helper.outcomeIDs(bestConfigsSA[0].outcomeList))
+    numSameConfigs = 0
+    for config in bestConfigsBF:
+          for parlay in bestConfigsSA:
+                if (configurations.equals(config,parlay)):
+                      numSameConfigs += 1
 
     print(f"{SA_Correctness:.5f}")
     print(str(SA_Offset))
+    print(str(numSameConfigs))
+
     
 
     
@@ -177,24 +178,11 @@ startScreen()
 #String factor refers to when one instance of a team winning is included in multiple configurations
 #By the nature of parlays, including the same pick in multiple configurations in the same grouping would make it liable for the entire grouping to fail with a single unexpected loss
 #Therefore a high "String Factor" would increase the total risk for the grouping, but shouldn't neccicarily be a dealbreaker if stringing a pick adequately improves total profit possibility.
-
-#numParlays = input("How many parlays would you like to bet on?")
 numParlays = input()
 print(numParlays)
-# while numParlays.isdigit() == False:
-#             print("Number of games must be a number. Try again")
-#             numParlays = input("How many games would you like to bet on?")
-#numGamesPool = input("From How many games would you like us to consider before we calculate best?")
 numGamesPool = input()
 print(numGamesPool)
-# while numGamesPool.isdigit() == False:
-#             print("Number of games to consider must be a number. Try again")
-#             numGamesPool = input("From How many games would you like us to consider before we calculate best?")
-#totalUserCapital = input("How much capital would you like to bet($)?")
 totalUserCapital = input()
-# while totalUserCapital.isdigit() == False:
-#             print("Captial must be a number. Try again")
-#             totalUserCapital = input("How much capital would you like to bet($)?")
 
 numParlays = int(numParlays)
 totalUserCapital = int(totalUserCapital)
@@ -204,18 +192,13 @@ outcomeList = []
 
 #initializes all game objects from user input, and thus al outcome objecs are internally initialized inside the game initialization function
 for x in range(numGamesPool):
-    # favoredTeam = input("Please Enter The Favored Team for game " + str(x) + ": ")
-    # underdog = input("Please Enter The Underdog for game " + str(x) + ": ")
+    
     favoredTeam = input()
     underdog = input()
 
-    # favoredWinP = int(input("Please enter the win percentage chance for the favored team: "))
+    
     favoredWinP = int(input())
-    # while favoredWinP < 50:
-    #         print("Favored Win Percentage must be 50 or higher. Try again")
-    #         favoredWinP = int(input("Please enter the win percentage chance for the favored team: "))
 
-    # gameX = game(favoredTeam, underdog, favoredWinP, x)
     gameX = game(favoredTeam, underdog, favoredWinP, x)
     gameList.append(gameX)
 
@@ -230,7 +213,7 @@ bestConfig(allConfigs, outcomeList)
 
 
 #deconstruct at end
-db_ops.destructor()
+#db_ops.destructor()
 
 
 
