@@ -3,683 +3,783 @@ How many parlays would you like to bet on?From How many games would you like us 
 Your Options..
 
 
-|Parlay Odds: +145.6|
-|Value: 0.59284|
-|Theoretical Payout: $24.560369387955593||
-|Decimal Odds: 2.456036938795559||
+|Parlay Odds: -120.28|
+|Value: 0.45396000000000003|
+|Theoretical Payout: $18.313676653725008||
+|Decimal Odds: 1.8313676653725006||
 |Cid: 1|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  E   |       60       |
-|  W   |       78       |
+|  K   |       85       |
+|  J   |       88       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +770.78|
-|Value: 0.88516|
-|Theoretical Payout: $87.07767328456984||
-|Decimal Odds: 8.707767328456985||
+|Parlay Odds: +395.15|
+|Value: 0.79804|
+|Theoretical Payout: $49.514755397108345||
+|Decimal Odds: 4.9514755397108345||
 |Cid: 2|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  E   |       60       |
-|  Y   |       22       |
+|  K   |       85       |
+|  J   |       88       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: +268.41|
-|Value: 0.72856|
-|Theoretical Payout: $36.840554081933384||
-|Decimal Odds: 3.684055408193338||
+|Parlay Odds: +1243.0|
+|Value: 0.92554|
+|Theoretical Payout: $134.30029546065003||
+|Decimal Odds: 13.430029546065004||
 |Cid: 3|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  P   |       40       |
-|  W   |       78       |
+|  K   |       85       |
+|  R   |       12       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +1206.17|
-|Value: 0.92344|
-|Theoretical Payout: $130.61650992685475||
-|Decimal Odds: 13.061650992685474||
+|Parlay Odds: +3531.08|
+|Value: 0.97246|
+|Theoretical Payout: $363.10820624546113||
+|Decimal Odds: 36.31082062454611||
 |Cid: 4|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  P   |       40       |
-|  Y   |       22       |
+|  K   |       85       |
+|  R   |       12       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: +1543.66|
-|Value: 0.93916|
-|Theoretical Payout: $164.36554898093357||
-|Decimal Odds: 16.436554898093355||
+|Parlay Odds: +937.78|
+|Value: 0.90364|
+|Theoretical Payout: $103.77750103777504||
+|Decimal Odds: 10.377750103777505||
 |Cid: 5|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  E   |       60       |
-|  W   |       78       |
+|  D   |       15       |
+|  J   |       88       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +5727.51|
-|Value: 0.98284|
-|Theoretical Payout: $582.7505827505828||
-|Decimal Odds: 58.27505827505828||
+|Parlay Odds: +2705.84|
+|Value: 0.96436|
+|Theoretical Payout: $280.58361391694734||
+|Decimal Odds: 28.05836139169473||
 |Cid: 6|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  E   |       60       |
-|  Y   |       22       |
+|  D   |       15       |
+|  J   |       88       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: +2365.48|
-|Value: 0.95944|
-|Theoretical Payout: $246.54832347140032||
-|Decimal Odds: 24.654832347140033||
+|Parlay Odds: +7510.35|
+|Value: 0.98686|
+|Theoretical Payout: $761.0350076103504||
+|Decimal Odds: 76.10350076103504||
 |Cid: 7|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  P   |       40       |
-|  W   |       78       |
+|  D   |       15       |
+|  R   |       12       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +8641.26|
-|Value: 0.98856|
-|Theoretical Payout: $874.125874125874||
-|Decimal Odds: 87.4125874125874||
+|Parlay Odds: +20476.13|
+|Value: 0.99514|
+|Theoretical Payout: $2057.61316872428||
+|Decimal Odds: 205.761316872428||
 |Cid: 8|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  P   |       40       |
-|  Y   |       22       |
+|  D   |       15       |
+|  R   |       12       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: -109.21|
-|Value: 0.478|
-|Theoretical Payout: $19.157088122605362||
-|Decimal Odds: 1.9157088122605364||
+|Parlay Odds: -296.83|
+|Value: 0.252|
+|Theoretical Payout: $13.368983957219253||
+|Decimal Odds: 1.3368983957219254||
 |Cid: 9|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  E   |       60       |
+|  K   |       85       |
+|  J   |       88       |
 +------+----------------+
 
-|Parlay Odds: +187.36|
-|Value: 0.6519999999999999|
-|Theoretical Payout: $28.735632183908038||
-|Decimal Odds: 2.873563218390804||
+|Parlay Odds: +880.39|
+|Value: 0.898|
+|Theoretical Payout: $98.03921568627452||
+|Decimal Odds: 9.803921568627452||
 |Cid: 10|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  P   |       40       |
+|  K   |       85       |
+|  R   |       12       |
 +------+----------------+
 
-|Parlay Odds: -211.14|
-|Value: 0.3214|
-|Theoretical Payout: $14.736221632773354||
-|Decimal Odds: 1.4736221632773354||
+|Parlay Odds: -163.5|
+|Value: 0.37950000000000006|
+|Theoretical Payout: $16.116035455278002||
+|Decimal Odds: 1.6116035455278004||
 |Cid: 11|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  W   |       78       |
+|  K   |       85       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +422.47|
-|Value: 0.8086|
-|Theoretical Payout: $52.2466039707419||
-|Decimal Odds: 5.2246603970741905||
+|Parlay Odds: +335.73|
+|Value: 0.7705|
+|Theoretical Payout: $43.57298474945534||
+|Decimal Odds: 4.357298474945534||
 |Cid: 12|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
-|  Y   |       22       |
-+------+----------------+
-
-|Parlay Odds: +1182.05|
-|Value: 0.922|
-|Theoretical Payout: $128.2051282051282||
-|Decimal Odds: 12.82051282051282||
-|Cid: 13|
-+------+----------------+
-| Team | Win Percentage |
-+------+----------------+
-|  X   |       13       |
-|  E   |       60       |
-+------+----------------+
-
-|Parlay Odds: +1823.08|
-|Value: 0.948|
-|Theoretical Payout: $192.30769230769226||
-|Decimal Odds: 19.230769230769226||
-|Cid: 14|
-+------+----------------+
-| Team | Win Percentage |
-+------+----------------+
-|  X   |       13       |
-|  P   |       40       |
-+------+----------------+
-
-|Parlay Odds: +886.19|
-|Value: 0.8986|
-|Theoretical Payout: $98.61932938856015||
-|Decimal Odds: 9.861932938856015||
-|Cid: 15|
-+------+----------------+
-| Team | Win Percentage |
-+------+----------------+
-|  X   |       13       |
-|  W   |       78       |
-+------+----------------+
-
-|Parlay Odds: +3396.5|
-|Value: 0.9714|
-|Theoretical Payout: $349.65034965034965||
-|Decimal Odds: 34.96503496503497||
-|Cid: 16|
-+------+----------------+
-| Team | Win Percentage |
-+------+----------------+
-|  X   |       13       |
-|  Y   |       22       |
-+------+----------------+
-
-|Parlay Odds: +113.68|
-|Value: 0.532|
-|Theoretical Payout: $21.367521367521366||
-|Decimal Odds: 2.1367521367521367||
-|Cid: 17|
-+------+----------------+
-| Team | Win Percentage |
-+------+----------------+
-|  E   |       60       |
-|  W   |       78       |
+|  K   |       85       |
+|  L   |       27       |
 +------+----------------+
 
 |Parlay Odds: +657.58|
 |Value: 0.868|
-|Theoretical Payout: $75.75757575757576||
-|Decimal Odds: 7.575757575757577||
+|Theoretical Payout: $75.75757575757578||
+|Decimal Odds: 7.575757575757578||
+|Cid: 13|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  D   |       15       |
+|  J   |       88       |
++------+----------------+
+
+|Parlay Odds: +5455.56|
+|Value: 0.982|
+|Theoretical Payout: $555.5555555555557||
+|Decimal Odds: 55.55555555555557||
+|Cid: 14|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  D   |       15       |
+|  R   |       12       |
++------+----------------+
+
+|Parlay Odds: +813.24|
+|Value: 0.8905|
+|Theoretical Payout: $91.32420091324204||
+|Decimal Odds: 9.132420091324203||
+|Cid: 15|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  D   |       15       |
+|  P   |       73       |
++------+----------------+
+
+|Parlay Odds: +2369.14|
+|Value: 0.9595|
+|Theoretical Payout: $246.91358024691363||
+|Decimal Odds: 24.69135802469136||
+|Cid: 16|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  D   |       15       |
+|  L   |       27       |
++------+----------------+
+
+|Parlay Odds: -179.64|
+|Value: 0.35760000000000003|
+|Theoretical Payout: $15.566625155666253||
+|Decimal Odds: 1.5566625155666254||
+|Cid: 17|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  J   |       88       |
+|  P   |       73       |
++------+----------------+
+
+|Parlay Odds: +320.88|
+|Value: 0.7624|
+|Theoretical Payout: $42.08754208754208||
+|Decimal Odds: 4.2087542087542085||
 |Cid: 18|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  E   |       60       |
-|  Y   |       22       |
+|  J   |       88       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: +220.51|
-|Value: 0.688|
-|Theoretical Payout: $32.051282051282044||
-|Decimal Odds: 3.2051282051282044||
+|Parlay Odds: +1041.55|
+|Value: 0.9124|
+|Theoretical Payout: $114.15525114155253||
+|Decimal Odds: 11.415525114155253||
 |Cid: 19|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  P   |       40       |
-|  W   |       78       |
+|  R   |       12       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +1036.36|
-|Value: 0.912|
-|Theoretical Payout: $113.63636363636363||
-|Decimal Odds: 11.363636363636363||
+|Parlay Odds: +2986.42|
+|Value: 0.9676|
+|Theoretical Payout: $308.641975308642||
+|Decimal Odds: 30.864197530864196||
 |Cid: 20|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  P   |       40       |
-|  Y   |       22       |
+|  R   |       12       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: -669.23|
-|Value: 0.13|
-|Theoretical Payout: $11.494252873563218||
-|Decimal Odds: 1.1494252873563218||
+|Parlay Odds: -566.67|
+|Value: 0.15000000000000002|
+|Theoretical Payout: $11.764705882352942||
+|Decimal Odds: 1.1764705882352942||
 |Cid: 21|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  G   |       87       |
+|  K   |       85       |
 +------+----------------+
 
-|Parlay Odds: +669.23|
-|Value: 0.87|
-|Theoretical Payout: $76.92307692307692||
-|Decimal Odds: 7.692307692307692||
+|Parlay Odds: +566.67|
+|Value: 0.85|
+|Theoretical Payout: $66.66666666666669||
+|Decimal Odds: 6.666666666666668||
 |Cid: 22|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
+|  D   |       15       |
 +------+----------------+
 
-|Parlay Odds: -150.0|
-|Value: 0.4|
-|Theoretical Payout: $16.666666666666668||
-|Decimal Odds: 1.6666666666666667||
+|Parlay Odds: -733.33|
+|Value: 0.12|
+|Theoretical Payout: $11.363636363636365||
+|Decimal Odds: 1.1363636363636365||
 |Cid: 23|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  E   |       60       |
+|  J   |       88       |
 +------+----------------+
 
-|Parlay Odds: +150.0|
-|Value: 0.6|
-|Theoretical Payout: $24.999999999999996||
-|Decimal Odds: 2.4999999999999996||
+|Parlay Odds: +733.33|
+|Value: 0.88|
+|Theoretical Payout: $83.33333333333334||
+|Decimal Odds: 8.333333333333334||
 |Cid: 24|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  P   |       40       |
+|  R   |       12       |
 +------+----------------+
 
-|Parlay Odds: -354.55|
-|Value: 0.21999999999999997|
-|Theoretical Payout: $12.82051282051282||
-|Decimal Odds: 1.282051282051282||
+|Parlay Odds: -270.37|
+|Value: 0.27|
+|Theoretical Payout: $13.698630136986303||
+|Decimal Odds: 1.3698630136986303||
 |Cid: 25|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  W   |       78       |
+|  P   |       73       |
 +------+----------------+
 
-|Parlay Odds: +354.55|
-|Value: 0.78|
-|Theoretical Payout: $45.45454545454546||
-|Decimal Odds: 4.545454545454546||
+|Parlay Odds: +270.37|
+|Value: 0.73|
+|Theoretical Payout: $37.03703703703703||
+|Decimal Odds: 3.7037037037037033||
 |Cid: 26|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  Y   |       22       |
+|  L   |       27       |
 +------+----------------+
-6 , 0
-gameIDs:[0]
-Best Value: 0, Curr Value: 0, neighbor_value: 0.13
-6 , 5
-gameIDs:[0, 2]
-Best Value: 0.13, Curr Value: 0.13, neighbor_value: 0.8086
-6 , 2
-gameIDs:[0, 2, 1]
-Best Value: 0.8086, Curr Value: 0.8086, neighbor_value: 0.8851600000000001
-Best Value: 0.8851600000000001, Curr Value: 0.8851600000000001, neighbor_value: 0.868
-AP: 0.9987995211519418
-6 , 0
-gameIDs:[2, 1, 0]
-Best Value: 0.8851600000000001, Curr Value: 0.868, neighbor_value: 0.88516
-6 , 2
-gameIDs:[2, 1, 0, 1]
-5 , 1
-gameIDs:[2, 1, 0, 0]
-4 , 3
-gameIDs:[2, 1, 0, 2]
-3 , 2
-gameIDs:[2, 1, 0, 2]
-2 , 0
-gameIDs:[2, 1, 0, 0]
-1 , 0
-gameIDs:[2, 1, 0, 1]
-Best Value: 0.8851600000000001, Curr Value: 0.88516, neighbor_value: 0.88516
-AP: 1.0
-Best Value: 0.8851600000000001, Curr Value: 0.88516, neighbor_value: 0.478
-AP: 0.9369310362868689
-Best Value: 0.8851600000000001, Curr Value: 0.478, neighbor_value: 0.13
-AP: 0.9360185353277765
-Best Value: 0.8851600000000001, Curr Value: 0.13, neighbor_value: 0
-AP: 0.9718051087760714
 6 , 5
 gameIDs:[2]
-Best Value: 0.8851600000000001, Curr Value: 0, neighbor_value: 0.78
-Best Value: 0.8851600000000001, Curr Value: 0.78, neighbor_value: 0
-AP: 0.8038038558113519
-6 , 2
+Best Value: 0, Curr Value: 0, neighbor_value: 0.73
+Best Value: 0.73, Curr Value: 0.73, neighbor_value: 0
+AP: 0.9927265802819868
+6 , 3
 gameIDs:[1]
-Best Value: 0.8851600000000001, Curr Value: 0, neighbor_value: 0.4
-6 , 4
-gameIDs:[1, 2]
-Best Value: 0.8851600000000001, Curr Value: 0.4, neighbor_value: 0.532
-6 , 1
-gameIDs:[1, 2, 0]
-Best Value: 0.8851600000000001, Curr Value: 0.532, neighbor_value: 0.93916
-Best Value: 0.93916, Curr Value: 0.93916, neighbor_value: 0.922
-AP: 0.9931595034413804
-Best Value: 0.93916, Curr Value: 0.922, neighbor_value: 0.87
-AP: 0.9778881319489527
-Best Value: 0.93916, Curr Value: 0.87, neighbor_value: 0
-AP: 0.6701859954319394
-6 , 2
-gameIDs:[1]
-Best Value: 0.93916, Curr Value: 0, neighbor_value: 0.4
-6 , 2
-gameIDs:[1, 1]
-5 , 1
-gameIDs:[1, 0]
-Best Value: 0.93916, Curr Value: 0.4, neighbor_value: 0.922
+Best Value: 0.73, Curr Value: 0, neighbor_value: 0.88
+Best Value: 0.88, Curr Value: 0.88, neighbor_value: 0
+AP: 0.9402589151464628
 6 , 5
-gameIDs:[1, 0, 2]
-Best Value: 0.93916, Curr Value: 0.922, neighbor_value: 0.98284
+gameIDs:[2]
+Best Value: 0.88, Curr Value: 0, neighbor_value: 0.73
+Best Value: 0.88, Curr Value: 0.73, neighbor_value: 0
+AP: 0.9094638763086945
+6 , 1
+gameIDs:[0]
+Best Value: 0.88, Curr Value: 0, neighbor_value: 0.85
+6 , 5
+gameIDs:[0, 2]
+Best Value: 0.88, Curr Value: 0.85, neighbor_value: 0.9595
 6 , 4
-gameIDs:[1, 0, 2, 2]
+gameIDs:[0, 2, 2]
 5 , 0
-gameIDs:[1, 0, 2, 0]
+gameIDs:[0, 2, 0]
+4 , 3
+gameIDs:[0, 2, 2]
+3 , 0
+gameIDs:[0, 2, 0]
+2 , 0
+gameIDs:[0, 2, 1]
+Best Value: 0.9595, Curr Value: 0.9595, neighbor_value: 0.96436
+Best Value: 0.96436, Curr Value: 0.96436, neighbor_value: 0.868
+AP: 0.9761978479978696
+6 , 0
+gameIDs:[0, 1, 0]
+5 , 0
+gameIDs:[0, 1, 0]
 4 , 0
-gameIDs:[1, 0, 2, 0]
-3 , 2
-gameIDs:[1, 0, 2, 2]
-2 , 1
-gameIDs:[1, 0, 2, 1]
-1 , 0
-gameIDs:[1, 0, 2, 1]
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.98284
-AP: 1.0
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.868
-AP: 0.9323449637498276
+gameIDs:[0, 1, 1]
+3 , 1
+gameIDs:[0, 1, 2]
+Best Value: 0.96436, Curr Value: 0.868, neighbor_value: 0.90364
 6 , 4
-gameIDs:[1, 2, 2]
+gameIDs:[0, 1, 2, 2]
+5 , 2
+gameIDs:[0, 1, 2, 1]
+4 , 0
+gameIDs:[0, 1, 2, 0]
+3 , 2
+gameIDs:[0, 1, 2, 2]
+2 , 1
+gameIDs:[0, 1, 2, 1]
+1 , 0
+gameIDs:[0, 1, 2, 0]
+Best Value: 0.96436, Curr Value: 0.90364, neighbor_value: 0.90364
+AP: 1.0
+Best Value: 0.96436, Curr Value: 0.90364, neighbor_value: 0.8905
+AP: 0.995542364879658
+Best Value: 0.96436, Curr Value: 0.8905, neighbor_value: 0.27
+AP: 0.7948634023771134
+6 , 3
+gameIDs:[2, 1]
+Best Value: 0.96436, Curr Value: 0.27, neighbor_value: 0.9124
+6 , 4
+gameIDs:[2, 1, 2]
+5 , 0
+gameIDs:[2, 1, 0]
+Best Value: 0.96436, Curr Value: 0.9124, neighbor_value: 0.92554
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.9124
+AP: 0.9939738306361003
+6 , 5
+gameIDs:[2, 1, 2]
+5 , 4
+gameIDs:[2, 1, 2]
+4 , 0
+gameIDs:[2, 1, 0]
+Best Value: 0.96436, Curr Value: 0.9124, neighbor_value: 0.92554
+6 , 0
+gameIDs:[2, 1, 0, 0]
+5 , 2
+gameIDs:[2, 1, 0, 1]
+4 , 2
+gameIDs:[2, 1, 0, 2]
+3 , 2
+gameIDs:[2, 1, 0, 2]
+2 , 1
+gameIDs:[2, 1, 0, 1]
+1 , 0
+gameIDs:[2, 1, 0, 0]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 1
+gameIDs:[2, 1, 0, 0]
+5 , 2
+gameIDs:[2, 1, 0, 1]
+4 , 2
+gameIDs:[2, 1, 0, 2]
+3 , 2
+gameIDs:[2, 1, 0, 2]
+2 , 0
+gameIDs:[2, 1, 0, 0]
+1 , 0
+gameIDs:[2, 1, 0, 1]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 5
+gameIDs:[2, 1, 0, 2]
+5 , 0
+gameIDs:[2, 1, 0, 0]
+4 , 0
+gameIDs:[2, 1, 0, 0]
+3 , 1
+gameIDs:[2, 1, 0, 1]
+2 , 0
+gameIDs:[2, 1, 0, 1]
+1 , 0
+gameIDs:[2, 1, 0, 2]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 1
+gameIDs:[2, 1, 0, 0]
+5 , 3
+gameIDs:[2, 1, 0, 2]
+4 , 0
+gameIDs:[2, 1, 0, 0]
+3 , 1
+gameIDs:[2, 1, 0, 1]
+2 , 1
+gameIDs:[2, 1, 0, 2]
+1 , 0
+gameIDs:[2, 1, 0, 1]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 3
+gameIDs:[2, 1, 0, 1]
 5 , 1
-gameIDs:[1, 2, 0]
-Best Value: 0.98284, Curr Value: 0.868, neighbor_value: 0.98284
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.868
-AP: 0.9259428160208323
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.922
-AP: 0.9583061308707601
+gameIDs:[2, 1, 0, 0]
+4 , 1
+gameIDs:[2, 1, 0, 1]
+3 , 2
+gameIDs:[2, 1, 0, 2]
+2 , 0
+gameIDs:[2, 1, 0, 0]
+1 , 0
+gameIDs:[2, 1, 0, 2]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 2
+gameIDs:[2, 1, 0, 1]
+5 , 0
+gameIDs:[2, 1, 0, 0]
+4 , 0
+gameIDs:[2, 1, 0, 0]
+3 , 1
+gameIDs:[2, 1, 0, 2]
+2 , 1
+gameIDs:[2, 1, 0, 2]
+1 , 0
+gameIDs:[2, 1, 0, 1]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 4
+gameIDs:[2, 1, 0, 2]
+5 , 4
+gameIDs:[2, 1, 0, 2]
+4 , 3
+gameIDs:[2, 1, 0, 1]
+3 , 1
+gameIDs:[2, 1, 0, 0]
+2 , 0
+gameIDs:[2, 1, 0, 0]
+1 , 0
+gameIDs:[2, 1, 0, 1]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+6 , 1
+gameIDs:[2, 1, 0, 0]
+5 , 1
+gameIDs:[2, 1, 0, 1]
+4 , 2
+gameIDs:[2, 1, 0, 2]
+3 , 0
+gameIDs:[2, 1, 0, 0]
+2 , 1
+gameIDs:[2, 1, 0, 2]
+1 , 0
+gameIDs:[2, 1, 0, 1]
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.92554
+AP: 1.0
+Best Value: 0.96436, Curr Value: 0.92554, neighbor_value: 0.898
+AP: 0.9792871205811953
 6 , 5
 gameIDs:[1, 0, 2]
-Best Value: 0.98284, Curr Value: 0.922, neighbor_value: 0.98284
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.868
-AP: 0.9164219282506757
+Best Value: 0.96436, Curr Value: 0.898, neighbor_value: 0.97246
+Best Value: 0.97246, Curr Value: 0.97246, neighbor_value: 0.7705
+AP: 0.8473790193049071
 6 , 4
-gameIDs:[1, 2, 2]
-5 , 3
-gameIDs:[1, 2, 1]
-4 , 2
-gameIDs:[1, 2, 1]
-3 , 1
-gameIDs:[1, 2, 0]
-Best Value: 0.98284, Curr Value: 0.868, neighbor_value: 0.98284
-6 , 3
-gameIDs:[1, 2, 0, 1]
-5 , 2
-gameIDs:[1, 2, 0, 1]
-4 , 1
-gameIDs:[1, 2, 0, 0]
-3 , 1
-gameIDs:[1, 2, 0, 2]
-2 , 0
-gameIDs:[1, 2, 0, 0]
-1 , 0
-gameIDs:[1, 2, 0, 2]
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.98284
-AP: 1.0
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.868
-AP: 0.9069989377829913
-Best Value: 0.98284, Curr Value: 0.98284, neighbor_value: 0.9714
-AP: 0.9899833046357434
-6 , 3
-gameIDs:[2, 0, 1]
-Best Value: 0.98284, Curr Value: 0.9714, neighbor_value: 0.98856
+gameIDs:[0, 2, 2]
+5 , 4
+gameIDs:[0, 2, 2]
+4 , 0
+gameIDs:[0, 2, 0]
+3 , 2
+gameIDs:[0, 2, 1]
+Best Value: 0.97246, Curr Value: 0.7705, neighbor_value: 0.97246
 6 , 1
-gameIDs:[2, 0, 1, 0]
-5 , 2
-gameIDs:[2, 0, 1, 1]
+gameIDs:[0, 2, 1, 0]
+5 , 0
+gameIDs:[0, 2, 1, 0]
 4 , 3
-gameIDs:[2, 0, 1, 2]
+gameIDs:[0, 2, 1, 2]
 3 , 0
-gameIDs:[2, 0, 1, 0]
-2 , 0
-gameIDs:[2, 0, 1, 1]
+gameIDs:[0, 2, 1, 1]
+2 , 1
+gameIDs:[0, 2, 1, 2]
 1 , 0
-gameIDs:[2, 0, 1, 2]
-Best Value: 0.98856, Curr Value: 0.98856, neighbor_value: 0.98856
+gameIDs:[0, 2, 1, 1]
+Best Value: 0.97246, Curr Value: 0.97246, neighbor_value: 0.97246
 AP: 1.0
-Best Value: 0.98856, Curr Value: 0.98856, neighbor_value: 0.9714
-AP: 0.9834925659020951
-Best Value: 0.98856, Curr Value: 0.9714, neighbor_value: 0.87
-AP: 0.9035715319777113
+Best Value: 0.97246, Curr Value: 0.97246, neighbor_value: 0.9676
+AP: 0.9955871652940794
+6 , 2
+gameIDs:[2, 1, 1]
+5 , 3
+gameIDs:[2, 1, 2]
+4 , 3
+gameIDs:[2, 1, 2]
+3 , 0
+gameIDs:[2, 1, 0]
+Best Value: 0.97246, Curr Value: 0.9676, neighbor_value: 0.97246
+Best Value: 0.97246, Curr Value: 0.97246, neighbor_value: 0.898
+AP: 0.930320433526755
+Best Value: 0.97246, Curr Value: 0.898, neighbor_value: 0.88
+AP: 0.9821610323583007
+Best Value: 0.97246, Curr Value: 0.88, neighbor_value: 0
+AP: 0.40397592272997623
+6 , 2
+gameIDs:[1]
+Best Value: 0.97246, Curr Value: 0, neighbor_value: 0.12
+Best Value: 0.97246, Curr Value: 0.12, neighbor_value: 0
+AP: 0.877393235491447
+6 , 1
+gameIDs:[0]
+Best Value: 0.97246, Curr Value: 0, neighbor_value: 0.85
 6 , 4
 gameIDs:[0, 2]
-Best Value: 0.98856, Curr Value: 0.87, neighbor_value: 0.8986
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.87
-AP: 0.9701389212072082
-6 , 0
-gameIDs:[0, 0]
+Best Value: 0.97246, Curr Value: 0.85, neighbor_value: 0.8905
+6 , 3
+gameIDs:[0, 2, 1]
+Best Value: 0.97246, Curr Value: 0.8905, neighbor_value: 0.98686
+6 , 3
+gameIDs:[0, 2, 1, 1]
 5 , 3
-gameIDs:[0, 2]
-Best Value: 0.98856, Curr Value: 0.87, neighbor_value: 0.8986
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.87
-AP: 0.9684755903644412
-Best Value: 0.98856, Curr Value: 0.87, neighbor_value: 0
-AP: 0.36769554742812355
+gameIDs:[0, 2, 1, 2]
+4 , 3
+gameIDs:[0, 2, 1, 2]
+3 , 0
+gameIDs:[0, 2, 1, 0]
+2 , 0
+gameIDs:[0, 2, 1, 0]
+1 , 0
+gameIDs:[0, 2, 1, 1]
+Best Value: 0.98686, Curr Value: 0.98686, neighbor_value: 0.98686
+AP: 1.0
+6 , 3
+gameIDs:[0, 2, 1, 1]
+5 , 3
+gameIDs:[0, 2, 1, 2]
+4 , 0
+gameIDs:[0, 2, 1, 0]
+3 , 1
+gameIDs:[0, 2, 1, 1]
+2 , 0
+gameIDs:[0, 2, 1, 0]
+1 , 0
+gameIDs:[0, 2, 1, 2]
+Best Value: 0.98686, Curr Value: 0.98686, neighbor_value: 0.98686
+AP: 1.0
+6 , 1
+gameIDs:[0, 2, 1, 0]
+5 , 2
+gameIDs:[0, 2, 1, 1]
+4 , 3
+gameIDs:[0, 2, 1, 2]
+3 , 1
+gameIDs:[0, 2, 1, 1]
+2 , 0
+gameIDs:[0, 2, 1, 0]
+1 , 0
+gameIDs:[0, 2, 1, 2]
+Best Value: 0.98686, Curr Value: 0.98686, neighbor_value: 0.98686
+AP: 1.0
+Best Value: 0.98686, Curr Value: 0.98686, neighbor_value: 0.982
+AP: 0.9937019165955754
+6 , 0
+gameIDs:[0, 1, 0]
+5 , 1
+gameIDs:[0, 1, 1]
+4 , 0
+gameIDs:[0, 1, 0]
+3 , 1
+gameIDs:[0, 1, 2]
+Best Value: 0.98686, Curr Value: 0.982, neighbor_value: 0.98686
+Best Value: 0.98686, Curr Value: 0.98686, neighbor_value: 0.982
+AP: 0.9934121953601052
+6 , 2
+gameIDs:[0, 1, 1]
+5 , 1
+gameIDs:[0, 1, 0]
+4 , 0
+gameIDs:[0, 1, 0]
+3 , 2
+gameIDs:[0, 1, 2]
+Best Value: 0.98686, Curr Value: 0.982, neighbor_value: 0.99514
+Best Value: 0.99514, Curr Value: 0.99514, neighbor_value: 0.9595
+AP: 0.9506504922719295
+Best Value: 0.99514, Curr Value: 0.9595, neighbor_value: 0.85
+AP: 0.8531883047429893
+Best Value: 0.99514, Curr Value: 0.85, neighbor_value: 0
+AP: 0.28422190223921745
+Best Value: 0.99514, Curr Value: 0.85, neighbor_value: 0
+AP: 0.2770658708950023
+6 , 5
+gameIDs:[2]
+Best Value: 0.99514, Curr Value: 0, neighbor_value: 0.73
+Best Value: 0.99514, Curr Value: 0.73, neighbor_value: 0
+AP: 0.3178740639357466
 6 , 0
 gameIDs:[0]
-Best Value: 0.98856, Curr Value: 0, neighbor_value: 0.13
-6 , 1
+Best Value: 0.99514, Curr Value: 0, neighbor_value: 0.15000000000000002
+6 , 4
+gameIDs:[0, 2]
+Best Value: 0.99514, Curr Value: 0.15000000000000002, neighbor_value: 0.37950000000000006
+Best Value: 0.99514, Curr Value: 0.37950000000000006, neighbor_value: 0.15000000000000002
+AP: 0.6831983852640214
+6 , 0
 gameIDs:[0, 0]
-5 , 1
-gameIDs:[0, 1]
-Best Value: 0.98856, Curr Value: 0.13, neighbor_value: 0.478
-6 , 0
-gameIDs:[0, 1, 0]
 5 , 0
-gameIDs:[0, 1, 0]
+gameIDs:[0, 0]
 4 , 1
-gameIDs:[0, 1, 1]
-3 , 0
-gameIDs:[0, 1, 1]
-2 , 0
-gameIDs:[0, 1, 2]
-Best Value: 0.98856, Curr Value: 0.478, neighbor_value: 0.59284
-6 , 0
-gameIDs:[0, 1, 2, 0]
-5 , 1
-gameIDs:[0, 1, 2, 1]
-4 , 3
-gameIDs:[0, 1, 2, 2]
-3 , 2
-gameIDs:[0, 1, 2, 2]
-2 , 0
-gameIDs:[0, 1, 2, 0]
-1 , 0
-gameIDs:[0, 1, 2, 1]
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.59284
-AP: 1.0
-6 , 2
-gameIDs:[0, 1, 2, 1]
-5 , 2
-gameIDs:[0, 1, 2, 1]
-4 , 0
-gameIDs:[0, 1, 2, 0]
-3 , 1
-gameIDs:[0, 1, 2, 2]
-2 , 0
-gameIDs:[0, 1, 2, 0]
-1 , 0
-gameIDs:[0, 1, 2, 2]
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.59284
-AP: 1.0
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.478
-AP: 0.8583552679377486
-Best Value: 0.98856, Curr Value: 0.478, neighbor_value: 0.13
-AP: 0.6229556191821473
-Best Value: 0.98856, Curr Value: 0.478, neighbor_value: 0.13
-AP: 0.6164857937705577
+gameIDs:[0, 1]
+Best Value: 0.99514, Curr Value: 0.15000000000000002, neighbor_value: 0.898
 6 , 3
 gameIDs:[0, 1, 1]
-5 , 3
+5 , 4
 gameIDs:[0, 1, 2]
-Best Value: 0.98856, Curr Value: 0.478, neighbor_value: 0.59284
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.532
-AP: 0.9155612626109287
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.3214
-AP: 0.669160591885034
-6 , 1
-gameIDs:[0, 1, 2, 0]
+Best Value: 0.99514, Curr Value: 0.898, neighbor_value: 0.97246
+6 , 3
+gameIDs:[0, 1, 2, 1]
 5 , 0
 gameIDs:[0, 1, 2, 0]
-4 , 0
-gameIDs:[0, 1, 2, 1]
-3 , 0
-gameIDs:[0, 1, 2, 1]
-2 , 1
-gameIDs:[0, 1, 2, 2]
-1 , 0
-gameIDs:[0, 1, 2, 2]
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.59284
-AP: 1.0
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.478
-AP: 0.8379024444619364
-6 , 5
-gameIDs:[0, 1, 2, 2]
-5 , 2
-gameIDs:[0, 1, 2, 1]
 4 , 3
 gameIDs:[0, 1, 2, 2]
-3 , 1
+3 , 0
 gameIDs:[0, 1, 2, 0]
 2 , 1
+gameIDs:[0, 1, 2, 2]
+1 , 0
 gameIDs:[0, 1, 2, 1]
-1 , 0
-gameIDs:[0, 1, 2, 0]
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.59284
+Best Value: 0.99514, Curr Value: 0.97246, neighbor_value: 0.97246
 AP: 1.0
-Best Value: 0.98856, Curr Value: 0.59284, neighbor_value: 0.532
-AP: 0.9072438605592797
-Best Value: 0.98856, Curr Value: 0.532, neighbor_value: 0.4
-AP: 0.8064124038700784
-6 , 4
-gameIDs:[1, 2]
-Best Value: 0.98856, Curr Value: 0.4, neighbor_value: 0.532
-6 , 5
-gameIDs:[1, 2, 2]
-5 , 2
-gameIDs:[1, 2, 1]
-4 , 1
-gameIDs:[1, 2, 0]
-Best Value: 0.98856, Curr Value: 0.532, neighbor_value: 0.93916
-6 , 4
-gameIDs:[1, 2, 0, 2]
-5 , 2
-gameIDs:[1, 2, 0, 1]
-4 , 1
-gameIDs:[1, 2, 0, 0]
-3 , 2
-gameIDs:[1, 2, 0, 2]
-2 , 1
-gameIDs:[1, 2, 0, 1]
-1 , 0
-gameIDs:[1, 2, 0, 0]
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.93916
-AP: 1.0
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.8986
-AP: 0.9314805215517282
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.21999999999999997
-AP: 0.29882176111854925
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.21999999999999997
-AP: 0.29279985269088743
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.21999999999999997
-AP: 0.28689929881577014
+Best Value: 0.99514, Curr Value: 0.97246, neighbor_value: 0.7705
+AP: 0.6980330693847407
 6 , 0
-gameIDs:[2, 0, 0]
+gameIDs:[0, 2, 0]
 5 , 1
-gameIDs:[2, 0, 1]
-Best Value: 0.98856, Curr Value: 0.8986, neighbor_value: 0.93916
-6 , 4
-gameIDs:[2, 0, 1, 2]
-5 , 1
-gameIDs:[2, 0, 1, 0]
-4 , 3
-gameIDs:[2, 0, 1, 2]
+gameIDs:[0, 2, 1]
+Best Value: 0.99514, Curr Value: 0.7705, neighbor_value: 0.79804
+6 , 0
+gameIDs:[0, 2, 1, 0]
+5 , 4
+gameIDs:[0, 2, 1, 2]
+4 , 2
+gameIDs:[0, 2, 1, 1]
 3 , 0
-gameIDs:[2, 0, 1, 0]
+gameIDs:[0, 2, 1, 0]
 2 , 0
-gameIDs:[2, 0, 1, 1]
+gameIDs:[0, 2, 1, 1]
 1 , 0
-gameIDs:[2, 0, 1, 1]
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.93916
+gameIDs:[0, 2, 1, 2]
+Best Value: 0.99514, Curr Value: 0.79804, neighbor_value: 0.79804
 AP: 1.0
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.532
-AP: 0.4557463838310448
+Best Value: 0.99514, Curr Value: 0.79804, neighbor_value: 0.252
+AP: 0.36020037685594647
+6 , 3
+gameIDs:[0, 2, 1, 1]
+5 , 3
+gameIDs:[0, 2, 1, 2]
+4 , 1
+gameIDs:[0, 2, 1, 0]
+3 , 1
+gameIDs:[0, 2, 1, 1]
+2 , 1
+gameIDs:[0, 2, 1, 2]
+1 , 0
+gameIDs:[0, 2, 1, 0]
+Best Value: 0.99514, Curr Value: 0.79804, neighbor_value: 0.79804
+AP: 1.0
+6 , 3
+gameIDs:[0, 2, 1, 1]
+5 , 3
+gameIDs:[0, 2, 1, 2]
+4 , 0
+gameIDs:[0, 2, 1, 0]
+3 , 2
+gameIDs:[0, 2, 1, 2]
+2 , 0
+gameIDs:[0, 2, 1, 0]
+1 , 0
+gameIDs:[0, 2, 1, 1]
+Best Value: 0.99514, Curr Value: 0.79804, neighbor_value: 0.79804
+AP: 1.0
+Best Value: 0.99514, Curr Value: 0.79804, neighbor_value: 0.7705
+AP: 0.9474525712563173
 6 , 4
-gameIDs:[2, 0, 1, 2]
-5 , 1
-gameIDs:[2, 0, 1, 0]
-4 , 3
-gameIDs:[2, 0, 1, 2]
-3 , 0
-gameIDs:[2, 0, 1, 0]
-2 , 0
-gameIDs:[2, 0, 1, 1]
-1 , 0
-gameIDs:[2, 0, 1, 1]
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.93916
-AP: 1.0
-Best Value: 0.98856, Curr Value: 0.93916, neighbor_value: 0.8986
-AP: 0.9224571075769178
+gameIDs:[0, 2, 2]
+5 , 4
+gameIDs:[0, 2, 2]
+4 , 2
+gameIDs:[0, 2, 1]
+Best Value: 0.99514, Curr Value: 0.7705, neighbor_value: 0.79804
 
  Best Parlays to Bet (BF):
 
 
-|Parlay Odds: +8641.26|
-|Value: 0.98856|
-|Theoretical Payout: $874.125874125874||
-|Decimal Odds: 87.4125874125874||
+|Parlay Odds: +20476.13|
+|Value: 0.99514|
+|Theoretical Payout: $2057.61316872428||
+|Decimal Odds: 205.761316872428||
 |Cid: 8|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  P   |       40       |
-|  Y   |       22       |
+|  D   |       15       |
+|  R   |       12       |
+|  L   |       27       |
 +------+----------------+
 
-|Parlay Odds: +5727.51|
-|Value: 0.98284|
-|Theoretical Payout: $582.7505827505828||
-|Decimal Odds: 58.27505827505828||
-|Cid: 6|
+|Parlay Odds: +7510.35|
+|Value: 0.98686|
+|Theoretical Payout: $761.0350076103504||
+|Decimal Odds: 76.10350076103504||
+|Cid: 7|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  X   |       13       |
-|  E   |       60       |
-|  Y   |       22       |
+|  D   |       15       |
+|  R   |       12       |
+|  P   |       73       |
 +------+----------------+
 
  Best Parlays to Bet (SA):
 
 
-|Parlay Odds: +8641.26|
-|Value: 0.98856|
-|Theoretical Payout: $874.125874125874||
-|Decimal Odds: 87.4125874125874||
+|Parlay Odds: +20476.13|
+|Value: 0.99514|
+|Theoretical Payout: $2057.61316872428||
+|Decimal Odds: 205.761316872428||
 |Cid: 96|
 +------+----------------+
 | Team | Win Percentage |
 +------+----------------+
-|  Y   |       22       |
-|  X   |       13       |
-|  P   |       40       |
+|  D   |       15       |
+|  R   |       12       |
+|  L   |       27       |
 +------+----------------+
