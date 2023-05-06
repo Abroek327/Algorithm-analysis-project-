@@ -1,4 +1,5 @@
 from db_operations_testing import db_operations
+from outcome_testing import outcome
 import random
 import copy
 
@@ -26,7 +27,7 @@ class configurations:
         
         return config.value
     
-    #Sorts a list of configs by value - is not essential if needs to be cut due to efficiency concerns
+    #Sorts a list of configs by value
     def sort(configList):
         cList = copy.deepcopy(configList)
 
@@ -158,43 +159,57 @@ class configurations:
     
     @staticmethod
     def offset(configA, configB):
+
         SA_Offset = 0
+        combinedList = []
+        combinedList.extend(configA.outcomeList)
+        combinedList.extend(configB.outcomeList)
+        combinedSet = []
 
-        #increments SA_Offset if the best solution contains a outcome that it does not
-        for o in configurations.outcomeIDs(configA.outcomeList):
-            exist_count = (configurations.outcomeIDs(configB.outcomeList)).count(o)
+        for item in combinedList:
+            present = False
 
-            if(exist_count <= 0):
-                SA_Offset += 1
+            for o in combinedSet:
 
-        #increments SA_Offset if the it contains a outcome that best solution does not
-        for o in configurations.outcomeIDs(configB.outcomeList):
-            exist_count = (configurations.outcomeIDs(configA.outcomeList)).count(o)
+                if outcome.equals(item, o):
+                    present = True
+                    break
+                
+            if(not present):
+                combinedSet.append(item)
+                
+        Crossover = len(combinedList) - len(combinedSet) 
+        SA_Offset = len(combinedSet) - Crossover
 
-            if(exist_count <= 0):
-                SA_Offset += 1
-
-        return SA_Offset
+        return abs(SA_Offset)
     
+    @staticmethod
+    def crossover(configA, configB):
+        combinedList = []
+        combinedList.extend(configA.outcomeList)
+        combinedList.extend(configB.outcomeList)
+        combinedSet = set(combinedList)
+        Crossover = len(combinedList) - len(combinedSet) 
 
+        return Crossover
+    
+    #parameters are two config lists that do not share any elements, and are also the same length
+    #generate config lists that share no elements and are same length by using configGroup crossover method
     @staticmethod
     def multiOffset(configListA, configListB):
-        listA = copy.deepcopy(configListA)
-        listB = copy.deepcopy(configListB)
-        SA_Offset = 0
+        configListA = configurations.sort(configListA)
+        configListB = configurations.sort(configListB)
+        SA_mOffset = 0
+        maxPracticalOffset = 0
 
-        #to fix current error: set for loop to decrement instread of increment
-        for i in range(len(configListA)):
-            for j in range(len(configListB)):
-                if (configurations.equals(configListA[i],configListB[j])):
-                        del listA[i]
-                        del listB[j]
+        for x in range(len(configListA)-1):
+            SA_mOffset += configurations.offset(configListA[x], configListB[x])
+            maxPracticalOffset += configListA[x].numOutcomes
 
-        for x in range(len(listA)-1):
-            SA_Offset += configurations.offset(listA[x], listB[x])
+        #to account for the fact that offsets can happen both if the potential config does not include a outcome the target config has, and if the potential includes a outcome the target config has not
+        maxPracticalOffset *= 2
 
-
-        return SA_Offset
+        return SA_mOffset , maxPracticalOffset
 
 
 

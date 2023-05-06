@@ -6,6 +6,7 @@ from game_testing import game
 import itertools
 from prettytable import PrettyTable
 from SA_MP_testing_version import outputs_SA
+from config_group_testing import configGroup
 import time
 #from flask import Flask
 #from flask import render_template
@@ -109,10 +110,8 @@ def calculate_runtime(func, configX, outcomeList, bestConfigsSA, T_0):
     x = func(configX, outcomeList, bestConfigsSA, T_0)
     end_time = time.time()
     runtime = end_time - start_time
-    print(f"{runtime:.4f}")
-    print(f"{outputs_SA.getThresh():.3f}")
 
-    return x
+    return x , runtime 
 
 
 
@@ -144,22 +143,42 @@ def bestConfig(configList,outcomeList):
     configX = configurations([])
     bestConfigsSA = []
 
+    runtime = 0
+    starting_thresh = outputs_SA.getThresh()
+
     while len(bestConfigsSA) < numParlays:
-        bestConfigsSA.append(calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, outputs_SA.getThresh()))
+        SA_runtime = calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, outputs_SA.getThresh())
+        bestConfigsSA.append(SA_runtime[0])
+        runtime += SA_runtime[1]
 
+    print(f"{runtime:.4f}")
+    print(f"{starting_thresh:.3f}")
 
-    SA_Correctness = 1 - (bestConfigsBF[0].value - bestConfigsSA[0].value)
-    SA_Offset = configurations.multiOffset(bestConfigsBF,bestConfigsSA)
+    SAresults = configGroup(bestConfigsSA)
+    BFresults = configGroup(bestConfigsBF)
+    crossover = configGroup.crossover(BFresults, SAresults)
 
-    numSameConfigs = 0
-    for config in bestConfigsBF:
-          for parlay in bestConfigsSA:
-                if (configurations.equals(config,parlay)):
-                      numSameConfigs += 1
+    numSameConfigs = crossover[0]
+
+    SA_Offset = configurations.multiOffset(crossover[2],crossover[3])
+
+    if(SA_Offset[1] == 0):
+        SA_Correctness = 1
+
+    elif((numSameConfigs / numParlays) == 0):
+        SA_Correctness = (1 -  (float(SA_Offset[0]) / float(SA_Offset[1]))) 
+    else:
+        SA_Correctness = ((1 -  (float(SA_Offset[0]) / float(SA_Offset[1]))) * (1 - (numSameConfigs / numParlays))) + (numSameConfigs / numParlays)
 
     print(f"{SA_Correctness:.5f}")
-    print(str(SA_Offset))
+    print(str(SA_Offset[0]))
     print(str(numSameConfigs))
+
+    # print("\n Best Parlays to Bet (BF):\n")
+    # helper.config_print(bestConfigsBF)
+
+    # print("\n Best Parlays to Bet (SA):\n")
+    # helper.config_print(bestConfigsSA)
 
     
 

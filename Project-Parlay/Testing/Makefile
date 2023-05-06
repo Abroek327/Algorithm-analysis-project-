@@ -9,11 +9,11 @@ run:
 
 test:
 
-	number=1 ; while [[ $$number -le 100 ]] ; do \
+	number=1 ; while [[ $$number -le 50 ]] ; do \
         python3 testing_script_generator.py ; \
-	python3 parlay_testing_version.py < testing_script.txt > ZampleOutput_2.0.txt ; \
+	python3 parlay_testing_version.py < testing_script.txt >> ZampleOutput_2.0.txt ; \
         ((number = number + 1)) ; \
 	done
 
 fetchData:
-	python3 test_data_reader.py < ZampleOutput_1.0.txt
+	python3 test_data_reader.py < ZampleOutput_2.0.txt

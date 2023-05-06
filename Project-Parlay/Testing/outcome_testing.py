@@ -8,6 +8,13 @@ class outcome:
 
         return outcome.oID
     
+    def equals(outcomeA, outcomeB):
+
+        if(outcomeA.name == outcomeB.name and outcomeA.ImpliedProbability == outcomeB.ImpliedProbability):
+            return True
+        else:
+            return False
+    
     def __init__(self, winP, name, gameID):
         self.outcomeID = outcome.outcomeID()
         self.gameID = gameID

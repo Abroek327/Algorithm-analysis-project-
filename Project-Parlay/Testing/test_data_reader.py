@@ -2,7 +2,7 @@ import csv
 
 # Generate performance testing data for SA algorithm
 # Set up the CSV writer
-with open('SA_1P_testingData.csv', mode='w', newline='') as csv_file:
+with open('SA_MP_testingData.csv', mode='w', newline='') as csv_file:
     writer = csv.writer(csv_file)
 
     # Write the headers
@@ -15,7 +15,7 @@ with open('SA_1P_testingData.csv', mode='w', newline='') as csv_file:
     runtime = 0
     numGames = 0
     numParlays = 0 
-    numTests = 1100
+    numTests = 1150
     test_id = 0
     SA_Best_Overlap = 0
 
