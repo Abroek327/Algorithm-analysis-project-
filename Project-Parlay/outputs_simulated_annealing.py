@@ -8,16 +8,20 @@ import copy
 #http://what-when-how.com/artificial-intelligence/a-comparison-of-cooling-schedules-for-simulated-annealing-artificial-intelligence/
 
 class outputs_SA():
+    parlaysOutput = 0
+
     #Simulated Annueling Algorithm that finds best configuration from a set of total outputs
-    def outputs_simulated_annealing(initial_config, allOutputsList, bestConfigurationsList, temperature):
+    def outputs_simulated_annealing(initial_config, allOutputsList, bestConfigurationsList, temp_threshold):
+        outputs_SA.parlaysOutput += 0.01
         current_config = initial_config
         best_config = initial_config
+        temperature = 100
         temperature_init = temperature
         countIter = 0
         bestConfigurationsList
         acceptance_probability = -1 #remove later
 
-        while (temperature > 0.5):
+        while (temperature > (temp_threshold - outputs_SA.parlaysOutput)):
             #cooling_rate = abs(temperature_init / (1 + math.log(1 + countIter)))
 
             neighbor_config = outputs_SA.get_neighbor(current_config, allOutputsList)
@@ -29,19 +33,29 @@ class outputs_SA():
             # helper.outputListPrint(str(countIter)+"Curr config:" ,current_config.outcomeList)
             # helper.outputListPrint("Neighbor config:", neighbor_config.outcomeList)
 
-            print("Best Value: " + str(best_config.value) + ", Curr Value: " + str(current_value) + ", neighbor_value: " + str(neighbor_value))
+            #print("Best Value: " + str(best_config.value) + ", Curr Value: " + str(current_value) + ", neighbor_value: " + str(neighbor_value))
             if (neighbor_value > current_value):
                 current_config = neighbor_config
 
                 if (neighbor_value > best_config.value):
                     #TODO:potential solution to 2nd best issue: if neighbor config is the same as a config in the existing "best configs set",
-                    # then do not set best_config to neighbor config and continue 
-                    best_config = neighbor_config
+                    # then do not set best_config to neighbor config and continue
+
+                    potential_best_exists = False
+
+                    for existingBestConfig in bestConfigurationsList:
+                        if(configurations.equals(neighbor_config, existingBestConfig)):
+                            potential_best_exists = True
+
+                    if(potential_best_exists):
+                        pass
+                    else:
+                        best_config = neighbor_config
 
             else:
                 delta_value = (current_value - neighbor_value)
                 acceptance_probability = math.exp(-delta_value / temperature)
-                print("AP: " + str(acceptance_probability))
+                #print("AP: " + str(acceptance_probability))
 
                 if (random.uniform(0, 1) < acceptance_probability):
                     current_config = neighbor_config
@@ -75,6 +89,8 @@ class outputs_SA():
         else:
             rand = 5
 
+        #slight bias towards building bigger parlays to avoid initial backtracking
+        #later will make bias dynamic as most testing data can be analyzed
         if (rand > 4):
             #Generate Larger neighbor
             count = 0
@@ -88,13 +104,13 @@ class outputs_SA():
                     randomIndex = 0
                     breakout = True
                 
-                print(str(len(localAllOutputs)) + " , " + str(randomIndex))
+                #print(str(len(localAllOutputs)) + " , " + str(randomIndex))
 
                 potentialNeighborOptList = [*cOutputList,localAllOutputs[randomIndex]]
                 gameIDs = helper.gameIDs(potentialNeighborOptList)
 
                 # print("\n--Inside getneighbor:")
-                print("gameIDs:" + str(gameIDs))
+                #print("gameIDs:" + str(gameIDs))
                 # helper.outputListPrint("AllOpts:" ,allOutputsList)
                 # helper.outputListPrint("pNeigOpts", potentialNeighborOptList)
                 # print("--Exit getneighbor:\n")
@@ -125,7 +141,7 @@ class outputs_SA():
 
 
 
-
+        #may want to consider working with outcome list directly and only creating new object once SA finsihes, for efficiency reasons
         return configurations(neighborOutcomeList)
 
 
