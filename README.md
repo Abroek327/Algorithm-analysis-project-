@@ -3,8 +3,8 @@
 
 ## How to Run
 * Open a terminal inside the Project_parlay Folder
-* Run python parlay.py
-* Follow instructions when prompted
+* Run **make run**
+* Open index.html
 
 
 Our group consists of James Tran, Jason Bohlinger, Andrew Broek, and Max Hartel. For our MVP of Project Parlay, we will be taking a static finite database from a sports league (ex: NFL, NHL, MLB, etc.) that contains the most important attributes needed to test our algorithm(s). These important attributes are: Games,Odds, Outcomes, Dates. The finite database will allow us to test our algorithms on a small sample size to be scaled later on with live data using a web scraper. MySQL and SQLite will be used to help with parsing queries and implementing the algorithms. From here, we will be trying 4 different types of algorithms that we were suggested. These algorithms will determine the most optimal bet to maximize the probability of winning and capital gain. Testing these algorithms would include research and implementation to determine which gives the most optimal results. If multiple algorithms give very good yet slightly different results, we could give the user a choice of which result to use. We will be using Python as our primary language for algorithm implementation and logic, and TypeScript for building the webscraper. 
