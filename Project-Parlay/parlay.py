@@ -6,10 +6,9 @@ from game import game
 import itertools
 
 from prettytable import PrettyTable
+
 from multi_outputs_simulated_annealing import outputs_SA
-#from flask import Flask
-#from flask import render_template
-#app = Flask(__name__)
+
 
 
 
@@ -20,10 +19,15 @@ bestConfigsSA = []
 
 
 
-#@app.route('/')
+
 def startScreen():
     message = "Welcome to your Project Parlay!"
-    #return render_template('index.html', message=message)
+
+
+def startScreen():
+    message = "Welcome to your Project Parlay!"
+
+
 
 
 def search_by_year():
@@ -62,13 +66,6 @@ def search_by_games():
     '''
     
 
-# #@app.route('/')
-# def calculateWinP(spread):
-#     percent = (-.0303*spread) + .50
-#     if(percent > .99):
-#           return render_template('index.html', percent=.99)
-#     else:
-#           return render_template('index.html', percent=percent)
 
 def calculateWinP(spread):
     percent = (-.0303*spread) + .50
@@ -221,6 +218,8 @@ for gameInstance in gameList:
 permutations(numGamesPool, outcomeList)
 bestConfig(allConfigs, outcomeList)
 # search_by_games()
+
+
 
 
 #deconstruct at end
