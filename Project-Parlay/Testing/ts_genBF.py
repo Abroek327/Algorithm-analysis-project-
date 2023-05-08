@@ -4,10 +4,10 @@ from datetime import datetime, timedelta
 def main():
     # Open a file for writing
 
-    with open("testing_script.txt", "w") as file:
+    with open("testing_scriptBF.txt", "w") as file:
         
         rInt = random.randint(2, 5)
-        gInt = random.randint(rInt, 16)
+        gInt = random.randint(rInt, 13)
         # Write some text to the file
 
         #How many parlays would you like to bet on?
@@ -37,4 +37,3 @@ def main():
             file.write(str(fav_implied_win_p)+ "\n")
 
 main()
-

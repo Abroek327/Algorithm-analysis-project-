@@ -9,22 +9,31 @@ import copy
 
 class outputs_SA():
     parlaysOutput = 0
-    threshold = random.uniform(0.001, 0.01)
+    #threshold = 0.02
+    threshold = 0.03
+    thresholdMod = 0.8
 
     def getThresh():
         return outputs_SA.threshold
 
     #Simulated Annueling Algorithm that finds best configuration from a set of total outputs
     def outputs_simulated_annealing(initial_config, allOutputsList, bestConfigurationsList, temp_threshold):
-        outputs_SA.parlaysOutput *= 0.75
+        outputs_SA.parlaysOutput += 1
         current_config = initial_config
         best_config = initial_config
         temperature = 100
         temperature_init = temperature
         countIter = 0
         bestConfigurationsList
+        
+        outputs_SA.threshold = temp_threshold
 
-        while (temperature > (abs(temp_threshold - outputs_SA.parlaysOutput))):
+        for i in range(outputs_SA.parlaysOutput):
+            outputs_SA.threshold *= outputs_SA.thresholdMod
+
+
+
+        while (temperature > outputs_SA.threshold):
 
             neighbor_config = outputs_SA.get_neighbor(current_config, allOutputsList)
 

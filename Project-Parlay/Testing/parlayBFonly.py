@@ -123,21 +123,21 @@ def calculate_runtime(func, configX, outcomeList, bestConfigsSA, T_0):
 def bestConfig(configList,outcomeList):
       
     #Brute force evaluate all configs and then select best ones:
-    # while len(bestConfigsBF) < numParlays:
-    #     maxValue = 0
-    #     best = 0
+    while len(bestConfigsBF) < numParlays:
+        maxValue = 0
+        best = 0
 
-    #     for x in configList:
+        for x in configList:
 
-    #         if x.value > maxValue:
+            if x.value > maxValue:
                 
-    #             maxValue = x.value
-    #             best = x
+                maxValue = x.value
+                best = x
 
-    #     if best not in bestConfigsBF:
+        if best not in bestConfigsBF:
     
-    #         bestConfigsBF.append(best)
-    #         configList.remove(best)
+            bestConfigsBF.append(best)
+            configList.remove(best)
 
     #Dynamic best config finder using simulated annueling
     configX = configurations([])
@@ -146,12 +146,12 @@ def bestConfig(configList,outcomeList):
     runtime = 0
     # starting_thresh = outputs_SA.getThresh()
 
-    while len(bestConfigsSA) < numParlays:
-        SA_runtime = calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, outputs_SA.getThresh())
-        bestConfigsSA.append(SA_runtime[0])
-        runtime += SA_runtime[1]
+    # while len(bestConfigsSA) < numParlays:
+    #     SA_runtime = calculate_runtime(outputs_SA.outputs_simulated_annealing, configX, outcomeList, bestConfigsSA, outputs_SA.getThresh())
+    #     bestConfigsSA.append(SA_runtime[0])
+    #     runtime += SA_runtime[1]
 
-    print(f"{runtime:.4f}")
+    # print(f"{runtime:.4f}")
     # print(f"{starting_thresh:.3f}")
 
     # SAresults = configGroup(bestConfigsSA)
@@ -225,9 +225,12 @@ for gameInstance in gameList:
     outcomeList.extend(gameInstance.outcomes)
     
 
-
-#permutations(numGamesPool, outcomeList)
+start_time = time.time()
+permutations(numGamesPool, outcomeList)
 bestConfig(allConfigs, outcomeList)
+end_time = time.time()
+runtime = end_time - start_time
+print(f"{runtime:.4f}")
 # search_by_games()
 
 
