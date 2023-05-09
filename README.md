@@ -19,7 +19,7 @@ The program uses a sqlite database of NFL games with data such as teams, odds, o
 
 ## Testing
 
-## Complications
+## Complications/Challenges
 One of the most significant challenges we faced during the project was developing an efficient communication channel between our back-end and front-end. While we had initially planned on implementing a more sophisticated front-end, we ultimately had to make some compromises due to time and resource constraints. We shifted to a tkinter window and an HTML webpage printing the ASCII version of our output. The important and essential information is there, albeit in a less elegant way. Ultimately, the entire project can be done with one command in the command line and/or opening an HTML file in a browser, which is the ease of use we wanted. We also did not have the time to implement web scraping for live results. However, this did not affect the quality of our algorithm, and we were still able to achieve our goal of delivering accurate and optimal parlays to users.
 
 ## Contributions
