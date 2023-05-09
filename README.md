@@ -25,7 +25,7 @@ One of the most significant challenges we faced during the project was developin
 ## Contributions
 * Max:
 * James: Initial Simulated Annealing Research, Front-End Design and Implementation (Tkinter, HTML)
-* Jason:
+* Jason: Setup, maintenance, and formatting of the SQLite database for the group's needs.
 * Andrew:
 
 ## Future Directions
