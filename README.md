@@ -26,7 +26,7 @@ One of the most significant challenges we faced during the project was developin
 * Max:
 * James: Initial Simulated Annealing Research, Front-End Design and Implementation (Tkinter, HTML)
 * Jason: Setup, maintenance, and formatting of the SQLite database for the group's needs.
-* Andrew: SQL Testing and Knapsack research 
+* Andrew: SQL Testing, Knapsack research, and Simulated Annealing implementation.  
 
 ## Future Directions
 * Web scraping from an online database, yielding live results, would allow for easy automation. This means you could run this program for an entire season, hands-off, as it places bets for you and you can simply cash your checks!
