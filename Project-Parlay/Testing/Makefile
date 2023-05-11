@@ -6,6 +6,7 @@ clean:
 run:
 	python3 testing_script_generator.py
 	python3 parlay_testing_version.py < testing_script.txt > ZampleOutput_3.0.txt
+	python3 results.py
 
 runBF:
 	python3 ts_genBF.py
