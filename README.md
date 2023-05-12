@@ -3,7 +3,7 @@
 ## How to Run
 * Open a terminal inside the Project_parlay Folder
 * Run **make run**
-* Open index.html
+* Once the program is finsihed running, you can open index.html in a browser to see the data in a more convenient way
 
 ## Introduction
 Our group consists of James Tran, Jason Bohlinger, Andrew Broek, and Max Hartel. 
