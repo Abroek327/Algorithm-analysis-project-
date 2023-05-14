@@ -6,7 +6,7 @@
 * Run **make run**
 * Once the program is finished running, it will open a tkinter window to show the results
 * You can open **index.html** in a browser to see the data in a more convenient way
-* There is also a generated results file called **results.txt** that is also accessible, but is redundant with **index.html** and tkinter window
+* There is a generated results file called **results.txt** that is also accessible, but is redundant with **index.html** and tkinter window
 
 ## Key Files
 * Main Program: **parlay.py**
