@@ -17,8 +17,6 @@ class configurations:
         else:
             return config.AmericanOdds
 
-            
-    #TODO: Make accurate 'value' function from historical/theoretical factors using data science and back testing
     # Profit/risk are different representations of the same stat, so their ratio will always be 10
     #config.value = config.theoreticalProfit * config.profitChance
     def value(config):
@@ -93,9 +91,9 @@ class configurations:
 
         
     #Calculates potential profit for parlay assuming "True Odds"
-    #TODO Add web-Scraper support for the fixed odds of popular online casinos, maybe store tables of fixed odds for different size parlays and update as frequently as needed
     @staticmethod
     def profit(config):
+        #Equations for Math Checking
         # Win Percentage = Implied Probability
         # Implied probability = negative American odds/(negative American odds + 100) * 100
         # Implied probability = 100 / (positive American odds + 100) * 100
@@ -146,7 +144,8 @@ class configurations:
             return True
         else:
             return False
-        
+    
+    #Returns outcome IDs
     @staticmethod
     def outcomeIDs(outcomesList):
         outcomeIdList = []
@@ -156,6 +155,7 @@ class configurations:
         
         return outcomeIdList
     
+    #Returns the difference between two configs in terms of # of games
     @staticmethod
     def offset(configA, configB):
         SA_Offset = 0
@@ -177,8 +177,7 @@ class configurations:
         return SA_Offset
 
 
-    #TODO(SOLVED): Needs work to calculate for underdogs as well, currently assumes every team is a favorite
-    #TODO(SOLVED): Needs to be fixed to properly asses risk
+    #Returns risk of a parlay
     @staticmethod
     def risk(outcomeList):
         risk = 1
@@ -189,7 +188,7 @@ class configurations:
         return risk
 
 
-    
+    #initializes config object
     def __init__(self, outcomeList):
         self.numOutcomes = len(outcomeList)
         self.configID = configurations.configID()
@@ -203,7 +202,6 @@ class configurations:
             self.AmericanOdds = "Not Yet Assigned"
             self.ImpliedProbability = "Not Yet Assigned"
             self.decimalOdds = "Not Yet Assigned"
-            #TODO: Needs to have attribute 'value' that represents parlay quality
             # 'value' will be attribute maximized by simulated annueling
             self.value = "Not Yet Assigned"
 
@@ -215,7 +213,6 @@ class configurations:
             self.AmericanOdds = "Not Yet Assigned"
             self.ImpliedProbability = "Not Yet Assigned"
             self.decimalOdds = "Not Yet Assigned"
-            #TODO: Needs to have attribute 'value' that represents parlay quality
             # 'value' will be attribute maximized by simulated annueling
             self.value = 0
 

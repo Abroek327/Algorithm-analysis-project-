@@ -19,7 +19,7 @@ scroll_bar.pack(side=tk.RIGHT, fill="y", expand=False)
 text_widget.pack(side=tk.LEFT, fill="both", expand=True)
 
 #Creates text variable with the output file
-long_text = open("ZampleOutput_2.0.txt", 'r').read()
+long_text = open("results.txt", 'r').read()
  
 # Insert text into the text widget
 text_widget.insert(tk.END, long_text)

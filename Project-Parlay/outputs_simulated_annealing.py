@@ -1,3 +1,6 @@
+#Beta to Simulated Annealing
+#Not used in final program
+
 import random
 import math
 from configurations import configurations

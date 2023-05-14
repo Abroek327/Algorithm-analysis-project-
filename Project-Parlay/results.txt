@@ -1,0 +1,353 @@
+connection made...
+How many parlays would you like to bet on?From How many games would you like us to consider before we calculate best?How much capital would you like to bet($)?Please Enter The Favored Team for game 0: Please Enter The Underdog for game 0: Please enter the win percentage chance for the favored team: Please Enter The Favored Team for game 1: Please Enter The Underdog for game 1: Please enter the win percentage chance for the favored team: Please Enter The Favored Team for game 2: Please Enter The Underdog for game 2: Please enter the win percentage chance for the favored team: 
+Your Options..
+
+
+|Parlay Odds: -128.37|
+|Value: 0.43787999999999994|
+|Theoretical Payout: $17.789795773144522||
+|Decimal Odds: 1.7789795773144523||
+|Cid: 1|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  S   |       92       |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +230.38|
+|Value: 0.6973199999999999|
+|Theoretical Payout: $33.038192150125546||
+|Decimal Odds: 3.3038192150125547||
+|Cid: 2|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  S   |       92       |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: +1945.83|
+|Value: 0.95112|
+|Theoretical Payout: $204.58265139116205||
+|Decimal Odds: 20.458265139116204||
+|Cid: 3|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  F   |       8        |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +3699.39|
+|Value: 0.97368|
+|Theoretical Payout: $379.93920972644383||
+|Decimal Odds: 37.99392097264438||
+|Cid: 4|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  F   |       8        |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: +2687.07|
+|Value: 0.96412|
+|Theoretical Payout: $278.70680044593087||
+|Decimal Odds: 27.870680044593087||
+|Cid: 5|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  S   |       92       |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +5075.98|
+|Value: 0.98068|
+|Theoretical Payout: $517.5983436853003||
+|Decimal Odds: 51.75983436853002||
+|Cid: 6|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  S   |       92       |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: +31951.28|
+|Value: 0.99688|
+|Theoretical Payout: $3205.128205128205||
+|Decimal Odds: 320.5128205128205||
+|Cid: 7|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  F   |       8        |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +59423.81|
+|Value: 0.99832|
+|Theoretical Payout: $5952.380952380953||
+|Decimal Odds: 595.2380952380953||
+|Cid: 8|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  F   |       8        |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: -639.64|
+|Value: 0.1352|
+|Theoretical Payout: $11.563367252543939||
+|Decimal Odds: 1.156336725254394||
+|Cid: 9|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  S   |       92       |
++------+----------------+
+
+|Parlay Odds: +1229.79|
+|Value: 0.9248|
+|Theoretical Payout: $132.9787234042553||
+|Decimal Odds: 13.297872340425531||
+|Cid: 10|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  F   |       8        |
++------+----------------+
+
+|Parlay Odds: -157.07|
+|Value: 0.389|
+|Theoretical Payout: $16.366612111292962||
+|Decimal Odds: 1.6366612111292962||
+|Cid: 11|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +203.95|
+|Value: 0.671|
+|Theoretical Payout: $30.395136778115507||
+|Decimal Odds: 3.039513677811551||
+|Cid: 12|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: +1711.59|
+|Value: 0.9448|
+|Theoretical Payout: $181.15942028985503||
+|Decimal Odds: 18.115942028985504||
+|Cid: 13|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  S   |       92       |
++------+----------------+
+
+|Parlay Odds: +20733.33|
+|Value: 0.9952|
+|Theoretical Payout: $2083.333333333333||
+|Decimal Odds: 208.33333333333331||
+|Cid: 14|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  F   |       8        |
++------+----------------+
+
+|Parlay Odds: +2464.1|
+|Value: 0.961|
+|Theoretical Payout: $256.4102564102564||
+|Decimal Odds: 25.64102564102564||
+|Cid: 15|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +4661.9|
+|Value: 0.979|
+|Theoretical Payout: $476.1904761904762||
+|Decimal Odds: 47.61904761904762||
+|Cid: 16|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: -148.76|
+|Value: 0.4019999999999999|
+|Theoretical Payout: $16.722408026755854||
+|Decimal Odds: 1.6722408026755853||
+|Cid: 17|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +210.56|
+|Value: 0.6779999999999999|
+|Theoretical Payout: $31.055900621118017||
+|Decimal Odds: 3.1055900621118018||
+|Cid: 18|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: +1823.08|
+|Value: 0.948|
+|Theoretical Payout: $192.30769230769232||
+|Decimal Odds: 19.230769230769234||
+|Cid: 19|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  F   |       8        |
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +3471.43|
+|Value: 0.972|
+|Theoretical Payout: $357.1428571428572||
+|Decimal Odds: 35.71428571428572||
+|Cid: 20|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  F   |       8        |
+|  T   |       35       |
++------+----------------+
+
+|Parlay Odds: -1566.67|
+|Value: 0.06000000000000005|
+|Theoretical Payout: $10.638297872340425||
+|Decimal Odds: 1.0638297872340425||
+|Cid: 21|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  Q   |       94       |
++------+----------------+
+
+|Parlay Odds: +1566.67|
+|Value: 0.94|
+|Theoretical Payout: $166.66666666666663||
+|Decimal Odds: 16.666666666666664||
+|Cid: 22|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
++------+----------------+
+
+|Parlay Odds: -1150.0|
+|Value: 0.07999999999999996|
+|Theoretical Payout: $10.869565217391305||
+|Decimal Odds: 1.0869565217391304||
+|Cid: 23|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  S   |       92       |
++------+----------------+
+
+|Parlay Odds: +1150.0|
+|Value: 0.92|
+|Theoretical Payout: $125.0||
+|Decimal Odds: 12.5||
+|Cid: 24|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  F   |       8        |
++------+----------------+
+
+|Parlay Odds: -185.71|
+|Value: 0.35|
+|Theoretical Payout: $15.384615384615385||
+|Decimal Odds: 1.5384615384615385||
+|Cid: 25|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  I   |       65       |
++------+----------------+
+
+|Parlay Odds: +185.71|
+|Value: 0.65|
+|Theoretical Payout: $28.571428571428577||
+|Decimal Odds: 2.8571428571428577||
+|Cid: 26|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  T   |       35       |
++------+----------------+
+
+ Best Parlays to Bet (BF):
+
+
+|Parlay Odds: +59423.81|
+|Value: 0.99832|
+|Theoretical Payout: $5952.380952380953||
+|Decimal Odds: 595.2380952380953||
+|Cid: 8|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  F   |       8        |
+|  T   |       35       |
++------+----------------+
+
+ Best Parlays to Bet (SA):
+
+
+|Parlay Odds: +59423.81|
+|Value: 0.99832|
+|Theoretical Payout: $5952.380952380953||
+|Decimal Odds: 595.2380952380953||
+|Cid: 1418|
++------+----------------+
+| Team | Win Percentage |
++------+----------------+
+|  K   |       6        |
+|  F   |       8        |
+|  T   |       35       |
++------+----------------+
+
+ Num Parlays: 1
+ Num Shared: 1
