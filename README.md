@@ -2,17 +2,17 @@
 
 ## How to Run
 * Open a terminal inside the **Project_Parlay** Folder
-* Install Dependencies if not already installed:** pip3 install tk** & **pip3 install PrettyTable**
+* Install Dependencies if not already installed: **pip3 install tk** & **pip3 install PrettyTable**
 * Run **make run**
 * Once the program is finsihed running, it will open a tkinter window to show the results
 * You can open **index.html** in a browser to see the data in a more convenient way
 * There is also a generated results file called **results.txt** that is also accessable, but is redundant with **index.html** and tkinter window
 
 ## Key Files
-* Main Program: parlay.py
-* Testing Script: testing_script_generator.py
-* Tkinter Window: results.py
-* HTML: index.html
+* Main Program: **parlay.py**
+* Testing Script: **testing_script_generator.py**
+* Tkinter Window: **results.py**
+* HTML: **index.html**
 
 ## Introduction
 Our group consists of James Tran, Jason Bohlinger, Andrew Broek, and Max Hartel. 
@@ -21,7 +21,7 @@ Project Parlay is a program made for the purposes of sports betting. It takes th
 
 The program uses a sqlite database of NFL games with data such as teams, odds, outcomes, and dates as a sample to test simulated annealing as an algorithm for finding the most optimal bets. The bulk of our backend code is done in python. There are two options for our front-end:
 * When running the code in a command line, **results.py** will show a Tkinter window that prints the results of the parlays.
-* The user can also open index.html in a browser after running the code to see the results in a more accessible environment. 
+* The user can also open **index.html** in a browser after running the code to see the results in a more accessible environment. 
 
 ## Literature Review
 We reviewed many sources and conducted a wide variety of research throughout the course of the project, but none was more impactful than "The Algorithm Design Manual" by Steven S. Skiena; it's an indispensable resource for computer scientists, programmers, and algorithm enthusiasts alike. The book provides a comprehensive introduction to the art of algorithm design and analysis, presenting a broad range of algorithmic techniques and strategies that are applicable to a wide variety of computational problems.
