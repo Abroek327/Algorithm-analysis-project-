@@ -2,9 +2,11 @@
 
 ## How to Run
 * Open a terminal inside the Project_parlay Folder
+* Install Dependencies if not already installed:** pip3 install tk** & **pip3 install PrettyTable**
 * Run **make run**
-* Once the program is finsihed running, you can open index.html in a browser to see the data in a more convenient way
-* There is also a generated resultes file called results.txt that is also accessable, but is redundant with the index.html file
+* Once the program is finsihed running, it will open a tkinter window to show the results
+* You can open **index.html** in a browser to see the data in a more convenient way
+* There is also a generated results file called **results.txt** that is also accessable, but is redundant with **index.html** and tkinter window
 
 ## Key Files
 * Main Program: parlay.py
@@ -36,6 +38,8 @@ Overall, "The Algorithm Design Manual" is an excellent resource for anyone inter
 
 ## Testing
 Our project was a very amitious one from the start, and it was regretful that we did not achieve full functionality with a practical betting aid that could directly impact user profits. But that being said, we tested our product extreamely throughly, with great maticularity, and some of our most valuable takeaways from the entire project came from our testing, and analysis of our testing data. For specifics on testing data and to look at visualizations of the data itself, please refer to the markdown document in the testing folder of this project. In general, we tool a big data approach to testing our algorithm, there were lots of adjustable factors that were were trying to optimize within our project, such as runtime, percent correctness, cooling rate, initial temperature, number of out puts, and so on. This led us to think that building an automated testing suite that could generate thousands of tests, which could then be compared on a macro scale and analyzed for overarching trends, would be the best way of testing our program. This was challenging at times, as the project was originally designed for user imput and to display data as a human would like to read it, which was not viable for a testing suite to utilize. This led to us reconfiguring every file of the project to have a testing version as well, which output raw data into a csv for ease of access by our data analytics methods. This was extreamely benefitial to the project, as it led to us discovering many key optimal values for our program, such as threshold and runtime, and which values to use as a benchmark for future improvementsuch as the correct amount of groupings to output at one time. It also led to us establishing that a potentially benifitial future plan would be to have the program switch between brute force and SA depending on the number of user games entered, since the BF algorithm could still run quickly with less than 10 games, but would need to be subbed out for SA after that point. We checked our SA algorithm for correctness by comparing it to the brute-force algorithm, which was guarenteed to be correct, but was tedius to test effectively with a large automated suite, as each running of the brute force program was liable to take significant time, and at times thousands of tests would be sceduled to be run in the testing suite. 
+
+You can look more into depth at our testing in our [Testing](Project-Parlay/Testing/Test_Results_Data_Analysis) Folder where you can find python notebooks with our analysis.
 
 ## Complications/Challenges
 One of the most significant challenges we faced during the project was developing an efficient communication channel between our back-end and front-end. While we had initially planned on implementing a more sophisticated front-end, we ultimately had to make some compromises due to time and resource constraints. We shifted to a tkinter window and an HTML webpage printing the ASCII version of our output. The important and essential information is there, albeit in a less elegant way. Ultimately, the entire project can be done with one command in the command line and/or opening an HTML file in a browser, which is the ease of use we wanted. We also did not have the time to implement web scraping for live results. However, this did not affect the quality of our algorithm, and we were still able to achieve our goal of delivering accurate and optimal parlays to users.
