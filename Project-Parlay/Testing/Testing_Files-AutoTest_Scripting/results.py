@@ -1,18 +1,3 @@
-# from tkinter import *
-
-# root = Tk()
-
-# w = Scrollbar(root)
-# w.pack( side = RIGHT, fill = Y )
-
-# with open("ZampleOutput_1.0.txt", "r") as f:
-#     results = Label(root, text=f.read(), yscrollcommand = w.set).pack()
-
-# w.config( command = results.yview )
-
-# root.mainloop()
-
-
 import tkinter as tk
  
 # Create our master object to the Application
@@ -33,6 +18,7 @@ scroll_bar.pack(side=tk.RIGHT, fill="y", expand=False)
 # Place the text widget to the left side
 text_widget.pack(side=tk.LEFT, fill="both", expand=True)
  
+#Creates text variable with the output file
 long_text = open("ZampleOutput_3.0.txt", 'r').read()
  
 # Insert text into the text widget
