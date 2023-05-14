@@ -6,6 +6,12 @@
 * Once the program is finsihed running, you can open index.html in a browser to see the data in a more convenient way
 * There is also a generated resultes file called results.txt that is also accessable, but is redundant with the index.html file
 
+## Key Files
+* Main Program: parlay.py
+* Testing Script: testing_script_generator.py
+* Tkinter Window: results.py
+* HTML: index.html
+
 ## Introduction
 Our group consists of James Tran, Jason Bohlinger, Andrew Broek, and Max Hartel. 
 
@@ -54,7 +60,3 @@ Most of our computational and algorithmic challenges came from working with larg
 * References for algorithms:  https://algorithmsbook.com/optimization/#
 * Tkinter implementation: https://www.geeksforgeeks.org/python-tkinter-text-widget/
 * HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
-
-
-## MVP
-[Link to the MVP Google Doc](https://docs.google.com/document/d/13wJoVv6TtfDdh3ldmpE6DFQjKy5D8gcNz_RNbGRM4Nw/edit?usp=sharing)
