@@ -2,9 +2,11 @@
 
 ## How to Run
 * Open a terminal inside the Project_parlay Folder
+* Install Dependencies if not already installed:** pip3 install tk** & **pip3 install PrettyTable**
 * Run **make run**
-* Once the program is finsihed running, you can open index.html in a browser to see the data in a more convenient way
-* There is also a generated resultes file called results.txt that is also accessable, but is redundant with the index.html file
+* Once the program is finsihed running, it will open a tkinter window to show the results
+* You can open **index.html** in a browser to see the data in a more convenient way
+* There is also a generated results file called **results.txt** that is also accessable, but is redundant with **index.html** and tkinter window
 
 ## Key Files
 * Main Program: parlay.py
