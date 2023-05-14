@@ -4,7 +4,7 @@
 * Open a terminal inside the Project_parlay Folder
 * Run **make run**
 * Once the program is finsihed running, you can open index.html in a browser to see the data in a more convenient way
-* there is also a generated resultes file called results.txt that is also accessable, but is redundant with the index.html file
+* There is also a generated resultes file called results.txt that is also accessable, but is redundant with the index.html file
 
 ## Introduction
 Our group consists of James Tran, Jason Bohlinger, Andrew Broek, and Max Hartel. 
@@ -34,11 +34,11 @@ Our project was a very amitious one from the start, and it was regretful that we
 ## Complications/Challenges
 One of the most significant challenges we faced during the project was developing an efficient communication channel between our back-end and front-end. While we had initially planned on implementing a more sophisticated front-end, we ultimately had to make some compromises due to time and resource constraints. We shifted to a tkinter window and an HTML webpage printing the ASCII version of our output. The important and essential information is there, albeit in a less elegant way. Ultimately, the entire project can be done with one command in the command line and/or opening an HTML file in a browser, which is the ease of use we wanted. We also did not have the time to implement web scraping for live results. However, this did not affect the quality of our algorithm, and we were still able to achieve our goal of delivering accurate and optimal parlays to users.
 
-Most of our computational and algorithmic challenges came fromworking with large amounds of data at once. With the large historical database being utilized, and the nature of the number of combinations to expand at at great rate as thesize of a user game list increases, great emphasis had to be placed on making sure everything eas being done as efficiently as possible, and we would lose large amounts of time due to wain=ting n test results if we did not mind the efficiency. 
+Most of our computational and algorithmic challenges came from working with large amounds of data at once. With the large historical database being utilized, and the nature of the number of combinations to expand at at great rate as thesize of a user game list increases, great emphasis had to be placed on making sure everything eas being done as efficiently as possible, and we would lose large amounts of time due to waiting for n test results if we did not mind the efficiency. 
 
 ## Contributions
 * Max: Project Organizer, Implemented the single output and multi output simulated annealing algorithms, implemented and designed the automated testing suite, performed data analysis on testing results, project founder
-* James: Initial Simulated Annealing Research, Front-End Design and Implementation (Tkinter, HTML)
+* James: Initial Simulated Annealing Research, Database cleaning and formatting, Front-End Design and Implementation (Tkinter, HTML)
 * Jason: Setup, maintenance, formatting of the SQLite database for the group's needs, and creation + cleaning of testing data sources.
 * Andrew: SQL Testing, Knapsack research, and Simulated Annealing implementation research.  
 
@@ -50,10 +50,10 @@ Most of our computational and algorithmic challenges came fromworking with large
 * Our goal for this phase of the project was to be able to test and have the algorithm perform with a pool of up to 16 games, but through our testing we saw no reason why 16 should be a hard cap on the number of games considered, as it did not have any direct negative effects that were picked up by our testing. 
 
 ## References
+* Skiena, Steven S. The Algorithm Design Manual. 3rd ed., Springer, 2021.
 * References for algorithms:  https://algorithmsbook.com/optimization/#
 * Tkinter implementation: https://www.geeksforgeeks.org/python-tkinter-text-widget/
 * HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
-* Skiena, Steven S. The Algorithm Design Manual. 3rd ed., Springer, 2021.
 
 
 ## MVP
