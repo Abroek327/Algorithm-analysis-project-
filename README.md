@@ -1,7 +1,7 @@
 # Algorithim Analysis Final Project: Project Parlay
 
 ## How to Run
-* Open a terminal inside the Project_parlay Folder
+* Open a terminal inside the **Project_Parlay** Folder
 * Install Dependencies if not already installed:** pip3 install tk** & **pip3 install PrettyTable**
 * Run **make run**
 * Once the program is finsihed running, it will open a tkinter window to show the results
